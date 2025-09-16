@@ -3,6 +3,7 @@ import { Toaster } from "@/components/ui/toaster"
 import './globals.css';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
+import { Search } from 'lucide-react';
 
 export const metadata: Metadata = {
   title: 'Fancy Text Generator',
@@ -23,24 +24,29 @@ export default function RootLayout({
       </head>
       <body className="font-body antialiased">
         <div className="flex flex-col min-h-screen">
-          <header className="flex h-16 items-center border-b bg-card px-4 md:px-6">
-            <h1 className="text-xl font-semibold tracking-tight mr-auto">
-              <Link href="/">Fancy Text Generator</Link>
-            </h1>
+          <header className="flex h-20 items-center px-4 md:px-6">
+            <Link href="/" className="flex items-center gap-2 mr-auto">
+                <div className="bg-primary rounded-full p-2">
+                  <Search className="h-5 w-5 text-primary-foreground" />
+                </div>
+                <span className="text-xl font-semibold tracking-tight text-white">
+                  instafonts.in
+                </span>
+            </Link>
             <nav className="flex items-center space-x-2">
-              <Button variant="ghost" asChild>
+              <Button variant="ghost" asChild className="text-white hover:bg-white/10 hover:text-white">
                 <Link href="/">Home</Link>
               </Button>
-              <Button variant="ghost" asChild>
+              <Button variant="ghost" asChild className="text-white hover:bg-white/10 hover:text-white">
                 <Link href="/font-changer">Font Changer</Link>
               </Button>
-              <Button variant="ghost" asChild>
+              <Button variant="ghost" asChild className="text-white hover:bg-white/10 hover:text-white">
                 <Link href="/symbols">Symbols</Link>
               </Button>
-              <Button variant="ghost" asChild>
+              <Button variant="ghost" asChild className="text-white hover:bg-white/10 hover:text-white">
                 <Link href="/text-art">Text Art</Link>
               </Button>
-              <Button variant="ghost" asChild>
+              <Button variant="ghost" asChild className="text-white hover:bg-white/10 hover:text-white">
                 <Link href="/blog">Blog</Link>
               </Button>
             </nav>
@@ -50,15 +56,15 @@ export default function RootLayout({
               {children}
             </div>
           </main>
-          <footer className="mt-auto border-t bg-card">
-            <div className="container mx-auto flex flex-col md:flex-row items-center justify-between py-4 px-4 md:px-6 text-sm text-muted-foreground">
+          <footer className="mt-auto">
+            <div className="container mx-auto flex flex-col md:flex-row items-center justify-between py-4 px-4 md:px-6 text-sm text-white">
               <p className="text-center md:text-left mb-2 md:mb-0">
                 &copy; {new Date().getFullYear()} Fancy Text Generator. All rights reserved.
               </p>
               <div className="flex items-center space-x-4">
-                <Link href="/about" className="hover:text-foreground">About</Link>
-                <Link href="/contact" className="hover:text-foreground">Contact</Link>
-                <Link href="/privacy" className="hover:text-foreground">Privacy Policy</Link>
+                <Link href="/about" className="hover:underline">About</Link>
+                <Link href="/contact" className="hover:underline">Contact</Link>
+                <Link href="/privacy" className="hover:underline">Privacy Policy</Link>
               </div>
             </div>
           </footer>

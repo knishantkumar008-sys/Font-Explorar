@@ -5,8 +5,7 @@ import { useToast } from "@/hooks/use-toast"
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { ScrollArea } from '@/components/ui/scroll-area';
-import { Textarea } from '@/components/ui/textarea';
-import { Copy } from 'lucide-react';
+import { Copy, Heart } from 'lucide-react';
 
 const fancyStyles = [
   { name: 'Cursive', mapping: { a: '𝒶', b: '𝒷', c: '𝒸', d: '𝒹', e: '𝑒', f: '𝒻', g: '𝑔', h: '𝒽', i: '𝒾', j: '𝒿', k: '𝓀', l: '𝓁', m: '𝓂', n: '𝓃', o: '𝑜', p: '𝓅', q: '𝓆', r: '𝓇', s: '𝓈', t: '𝓉', u: '𝓊', v: '𝓋', w: '𝓌', x: '𝓍', y: '𝓎', z: '𝓏', A: '𝒜', B: '𝐵', C: '𝒞', D: '𝒟', E: '𝐸', F: '𝐹', G: '𝒢', H: '𝐻', I: '𝐼', J: '𝒥', K: '𝒦', L: '𝐿', M: '𝑀', N: '𝒩', O: '𝒪', P: '𝒫', Q: '𝒬', R: '𝑅', S: '𝒮', T: '𝒯', U: '𝒰', V: '𝒱', W: '𝒲', X: '𝒳', Y: '𝒴', Z: '𝒵' } },
@@ -51,9 +50,11 @@ function convertToFancy(text: string, style: (typeof fancyStyles)[0]): string {
   return text.split('').map(char => (mapping as Record<string, string>)[char] || char).join('');
 }
 
+const fontCategories = ["Cool", "Cute", "Fancy", "Cursive", "Small", "Bold", "Hidden", "GLITCH", "STYLISH", "STRIKETHROUGH", "UPSIDE DOWN", "WEIRD", "UNDERLINE", "ITA"];
+
 
 export default function FontExplorer() {
-  const [fancyText, setFancyText] = useState('Insta Fonts');
+  const [fancyText, setFancyText] = useState('Font Changer');
   const { toast } = useToast();
 
   const copyToClipboard = (text: string) => {
@@ -75,34 +76,37 @@ export default function FontExplorer() {
 
   return (
     <>
-      <Card>
-        <CardContent className="p-4">
-          <Textarea
-            value={fancyText}
-            onChange={(e: ChangeEvent<HTMLTextAreaElement>) => setFancyText(e.target.value)}
-            placeholder="Type your text here..."
-            className="w-full resize-y border-2 border-primary text-2xl shadow-inner focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2"
-            rows={3}
-          />
+      <Card className="shadow-2xl rounded-2xl">
+        <CardContent className="p-6">
+          <h2 className="text-2xl font-bold text-center mb-4">Font Changer</h2>
+          <div className="relative p-1 bg-gradient-to-r from-pink-500 via-yellow-500 to-cyan-500 rounded-lg">
+             <textarea
+                value={fancyText}
+                onChange={(e: ChangeEvent<HTMLTextAreaElement>) => setFancyText(e.target.value)}
+                placeholder="Type your text here..."
+                className="w-full resize-none border-0 text-lg shadow-inner focus:ring-0 focus-visible:ring-0 rounded-md p-4"
+                rows={2}
+              />
+          </div>
+          <div className="flex flex-wrap items-center justify-center gap-x-4 gap-y-2 mt-4 text-sm">
+            <Heart className="h-5 w-5 text-primary" />
+            {fontCategories.map(cat => (
+              <button key={cat} className="hover:underline">{cat}</button>
+            ))}
+          </div>
+
         </CardContent>
       </Card>
       
-      <div className="mt-6">
-        <ScrollArea className="h-[calc(100vh-340px)]">
-          <div className="space-y-4 pr-4">
-            {fancyTextResults.map((result) => (
-               <div key={result.style} className="rounded-lg border bg-card text-card-foreground shadow-sm">
-               <div className="flex items-center justify-between p-4">
-                 <p className="text-xl font-mono bg-muted p-3 rounded-md overflow-x-auto flex-grow">{result.text}</p>
-                 <Button variant="ghost" size="icon" onClick={() => copyToClipboard(result.text)} className="ml-4">
-                   <Copy className="h-5 w-5" />
-                   <span className="sr-only">Copy</span>
-                 </Button>
-               </div>
+      <div className="mt-6 space-y-4">
+          {fancyTextResults.map((result) => (
+             <div key={result.style} className="rounded-lg border bg-white/80 backdrop-blur-sm text-card-foreground shadow-lg cursor-pointer hover:shadow-xl transition-shadow" onClick={() => copyToClipboard(result.text)}>
+             <div className="flex items-center justify-between p-4">
+               <p className="text-xl font-mono flex-grow pr-4">{result.text}</p>
+               <span className="text-xs text-muted-foreground">{result.style}</span>
              </div>
-            ))}
-          </div>
-        </ScrollArea>
+           </div>
+          ))}
       </div>
     </>
   );

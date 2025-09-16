@@ -80,5 +80,6 @@
   }
   body {
     @apply bg-background text-foreground font-body;
+    background-image: linear-gradient(120deg, #89f7fe 0%, #66a6ff 100%);
   }
 }
