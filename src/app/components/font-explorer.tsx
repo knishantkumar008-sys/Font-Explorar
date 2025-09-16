@@ -65,6 +65,25 @@ export default function FontExplorer() {
     });
   };
 
+  const handleCategoryClick = (categoryName: string) => {
+    const style = fancyStyles.find(s => s.name.toLowerCase() === categoryName.toLowerCase());
+    if (style) {
+      setFancyText(convertToFancy(fancyText, style));
+    } else {
+        // Fallback for generic categories or categories that don't have a direct mapping
+        const firstMatchingStyle = fancyStyles.find(s => s.name.toLowerCase().includes(categoryName.toLowerCase()));
+        if(firstMatchingStyle) {
+            setFancyText(convertToFancy(fancyText, firstMatchingStyle));
+        } else {
+            toast({
+                title: 'Style not found',
+                description: `Could not find a style for "${categoryName}".`,
+                variant: 'destructive',
+            });
+        }
+    }
+  };
+  
   const fancyTextResults = useMemo(() => {
     if (!fancyText) return [];
     return fancyStyles.map(style => ({
@@ -91,7 +110,7 @@ export default function FontExplorer() {
           <div className="flex flex-wrap items-center justify-center gap-x-4 gap-y-2 mt-4 text-sm">
             <Heart className="h-5 w-5 text-primary" />
             {fontCategories.map(cat => (
-              <button key={cat} className="hover:underline">{cat}</button>
+              <button key={cat} onClick={() => handleCategoryClick(cat)} className="hover:underline">{cat}</button>
             ))}
           </div>
 
