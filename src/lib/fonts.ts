@@ -67,6 +67,11 @@ export const fancyStyles = [
     { name: 'Top Bottom', isDecorator: true, prefix: '̅', suffix: '̲', categories: ['Lined'] },
     { name: 'Double Overline', isDecorator: true, prefix: '̿', suffix: '', categories: ['Lined'] },
     { name: 'Arrow Underline', isDecorator: true, prefix: '', suffix: '➢', categories: ['Lined'] },
+    { name: 'Strange Look', mapping: { o: 'Φ', l: 'Ł', A: 'Λ', B: 'B', C: 'C', D: 'D', E: 'Σ', F: 'F', G: 'G', H: 'H', I: 'I', J: 'J', K: 'K', L: 'Ł', M: 'M', N: 'N', O: 'Φ', P: 'P', Q: 'Q', R: 'R', S: 'S', T: 'T', U: 'U', V: 'V', W: 'W', X: 'X', Y: 'Y', Z: 'Z'}, categories: ['Weird']},
+    { name: 'Zombies', mapping: { o: 'σ', l: 'Ł', e: 'є', y: 'ψ', A: 'Λ', B: 'B', C: 'C', D: 'D', E: 'Σ', F: 'F', G: 'G', H: 'H', I: 'I', J: 'J', K: 'K', L: 'Ł', M: 'M', N: 'N', O: 'Φ', P: 'P', Q: 'Q', R: 'R', S: 'S', T: 'T', U: 'U', V: 'V', W: 'W', X: 'X', Y: 'ψ', Z: 'Z'}, categories: ['Weird']},
+    { name: 'Creepy', isDecorator: true, perChar: true, prefix: '', suffix: '\u0301\u030c', categories: ['Weird']},
+    { name: 'Mysterious', isDecorator: true, perChar: true, prefix: '', suffix: '\u0359', categories: ['Weird']},
+    { name: 'Bizarre', isDecorator: true, perChar: true, prefix: '', suffix: '\u0368\u033e', categories: ['Weird']},
   ];
   
   export const fontCategories = ["All", "Popular", "Cool", "Cute", "Fancy", "Cursive", "Small", "Bold", "Boxed", "Joiners", "Lined", "Hidden", "GLITCH", "STYLISH", "STRIKETHROUGH", "UPSIDE DOWN", "WEIRD", "UNDERLINE", "ITA"];
