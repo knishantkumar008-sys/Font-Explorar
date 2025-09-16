@@ -35,6 +35,12 @@ export default function RootLayout({
                 <Link href="/font-changer">Font Changer</Link>
               </Button>
               <Button variant="ghost" asChild>
+                <Link href="/symbols">Symbols</Link>
+              </Button>
+              <Button variant="ghost" asChild>
+                <Link href="/text-art">Text Art</Link>
+              </Button>
+              <Button variant="ghost" asChild>
                 <Link href="/blog">Blog</Link>
               </Button>
               <Button variant="ghost" asChild>
@@ -48,7 +54,7 @@ export default function RootLayout({
               </Button>
             </nav>
           </header>
-          <main className="flex-1 overflow-auto">
+          <main className="flex-1 overflow-auto p-4 md:p-6">
             <div className="mx-auto max-w-4xl">
               {children}
             </div>
