@@ -1,6 +1,6 @@
 
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Mail, MessageCircle, Share2 } from "lucide-react";
+import { Mail, MessageCircle } from "lucide-react";
 
 export default function ContactPage() {
   return (
@@ -42,21 +42,7 @@ export default function ContactPage() {
           </CardHeader>
           <CardContent className="space-y-4 text-card-foreground">
             <p>
-              Have an idea for a new font style or a suggestion to improve our website? We are always looking for ways to make Font Explorer better. Share your thoughts with us!
-            </p>
-          </CardContent>
-        </Card>
-
-        <Card className="shadow-lg rounded-2xl">
-          <CardHeader>
-            <CardTitle className="flex items-center gap-2">
-              <Share2 className="h-6 w-6 text-primary" />
-              Follow Us
-            </CardTitle>
-          </CardHeader>
-          <CardContent className="space-y-4 text-card-foreground">
-            <p>
-              Stay updated with the latest font styles, blog posts, and announcements by following us on our social media channels (coming soon).
+              Have an idea for a new font style or a suggestion to improve our website? We are always looking for ways to make Font Explorer better. If a font or any other feature is not working correctly, please let us know so we can fix it!
             </p>
           </CardContent>
         </Card>
