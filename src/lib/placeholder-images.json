@@ -1,3 +1,35 @@
+
 {
-  "placeholderImages": []
+  "placeholderImages": [
+    {
+      "id": "blog-psychology",
+      "description": "Abstract representation of human psychology and fonts",
+      "imageUrl": "https://picsum.photos/seed/bp1/600/400",
+      "imageHint": "abstract psychology"
+    },
+    {
+      "id": "blog-pairing",
+      "description": "Creative combination of different font styles",
+      "imageUrl": "https://picsum.photos/seed/bp2/600/400",
+      "imageHint": "font design"
+    },
+    {
+      "id": "blog-social-media",
+      "description": "Illustration of social media icons and text",
+      "imageUrl": "https://picsum.photos/seed/bp3/600/400",
+      "imageHint": "social media"
+    },
+    {
+      "id": "blog-trends",
+      "description": "Futuristic design illustrating new trends",
+      "imageUrl": "https://picsum.photos/seed/bp4/600/400",
+      "imageHint": "design trends"
+    },
+    {
+      "id": "blog-branding",
+      "description": "Visuals representing brand identity and logos",
+      "imageUrl": "https://picsum.photos/seed/bp5/600/400",
+      "imageHint": "brand identity"
+    }
+  ]
 }
