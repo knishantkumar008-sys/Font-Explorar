@@ -1,6 +1,8 @@
 import type { Metadata } from 'next';
 import { Toaster } from "@/components/ui/toaster"
 import './globals.css';
+import Link from 'next/link';
+import { Button } from '@/components/ui/button';
 
 export const metadata: Metadata = {
   title: 'Fancy Text Generator',
@@ -20,7 +22,26 @@ export default function RootLayout({
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet" />
       </head>
       <body className="font-body antialiased">
-        {children}
+        <div className="flex flex-col min-h-screen">
+          <header className="flex h-16 items-center border-b bg-card px-4 md:px-6">
+            <h1 className="text-xl font-semibold tracking-tight mr-auto">
+              <Link href="/">Fancy Text Generator</Link>
+            </h1>
+            <nav className="flex items-center space-x-2">
+              <Button variant="ghost" asChild>
+                <Link href="/">Fancy Text</Link>
+              </Button>
+              <Button variant="ghost" asChild>
+                <Link href="/symbols">Symbols</Link>
+              </Button>
+            </nav>
+          </header>
+          <main className="flex-1 overflow-auto">
+            <div className="mx-auto max-w-4xl">
+              {children}
+            </div>
+          </main>
+        </div>
         <Toaster />
       </body>
     </html>

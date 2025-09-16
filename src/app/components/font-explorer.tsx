@@ -88,43 +88,36 @@ export default function FontExplorer() {
 
 
   return (
-    <div className="flex h-screen w-full flex-col bg-background">
-      <header className="flex h-16 items-center border-b bg-card px-4 md:px-6">
-        <h1 className="text-xl font-semibold tracking-tight">Fancy Text Generator</h1>
-      </header>
-      <main className="flex-1 overflow-auto p-4 md:p-6">
-        <div className="mx-auto max-w-4xl">
-          <Card>
-            <CardContent className="p-4">
-              <Textarea
-                value={fancyText}
-                onChange={(e: ChangeEvent<HTMLTextAreaElement>) => setFancyText(e.target.value)}
-                placeholder="Type your text here..."
-                className="w-full resize-y border-2 border-primary text-2xl shadow-inner focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2"
-                rows={3}
-              />
-            </CardContent>
-          </Card>
-          
-          <div className="mt-6">
-            <ScrollArea className="h-[calc(100vh-280px)]">
-              <div className="space-y-4 pr-4">
-                {fancyTextResults.map((result) => (
-                   <div key={result.style} className="rounded-lg border bg-card text-card-foreground shadow-sm">
-                   <div className="flex items-center justify-between p-4">
-                     <p className="text-xl font-mono bg-muted p-3 rounded-md overflow-x-auto flex-grow">{result.text}</p>
-                     <Button variant="ghost" size="icon" onClick={() => copyToClipboard(result.text)} className="ml-4">
-                       <Copy className="h-5 w-5" />
-                       <span className="sr-only">Copy</span>
-                     </Button>
-                   </div>
-                 </div>
-                ))}
-              </div>
-            </ScrollArea>
+    <div className="flex-1 space-y-4 p-4 md:p-6 pt-6">
+      <Card>
+        <CardContent className="p-4">
+          <Textarea
+            value={fancyText}
+            onChange={(e: ChangeEvent<HTMLTextAreaElement>) => setFancyText(e.target.value)}
+            placeholder="Type your text here..."
+            className="w-full resize-y border-2 border-primary text-2xl shadow-inner focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2"
+            rows={3}
+          />
+        </CardContent>
+      </Card>
+      
+      <div className="mt-6">
+        <ScrollArea className="h-[calc(100vh-280px)]">
+          <div className="space-y-4 pr-4">
+            {fancyTextResults.map((result) => (
+               <div key={result.style} className="rounded-lg border bg-card text-card-foreground shadow-sm">
+               <div className="flex items-center justify-between p-4">
+                 <p className="text-xl font-mono bg-muted p-3 rounded-md overflow-x-auto flex-grow">{result.text}</p>
+                 <Button variant="ghost" size="icon" onClick={() => copyToClipboard(result.text)} className="ml-4">
+                   <Copy className="h-5 w-5" />
+                   <span className="sr-only">Copy</span>
+                 </Button>
+               </div>
+             </div>
+            ))}
           </div>
-        </div>
-      </main>
+        </ScrollArea>
+      </div>
     </div>
   );
 }
