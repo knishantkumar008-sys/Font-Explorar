@@ -5,7 +5,7 @@ import { useToast } from "@/hooks/use-toast";
 const symbolCategories = [
   {
     name: "Currency",
-    symbols: ["€", "£", "¥", "₹", "₽", "₱", "₩", "฿", "₫", "₴", "₸", "₼", "₿", "¢", "₡", "₢", "₣", "₤", "₥", "₦", "₧", "₨", "₪", "₮", "₯", "₰", "₲", "₳", "₴", "₵", "₶", "₷", "₸", "₹", "₺", "₻", "₼", "₽", "₾", "₿"],
+    symbols: ["€", "£", "¥", "₹", "₽", "₱", "₩", "฿", "₫", "₴", "₸", "₼", "₿", "¢", "₡", "₢", "₣", "₤", "₥", "₦", "₧", "₨", "₪", "₮", "₯", "₰", "₲", "₳", "₵", "₶", "₷", "₺", "₻", "₾"],
   },
   {
     name: "Math",
@@ -17,7 +17,7 @@ const symbolCategories = [
   },
   {
     name: "Stars & Flowers",
-    symbols: ["★", "☆", "✦", "✧", "✩", "✪", "✫", "✬", "✭", "✮", "✯", "✰", "✶", "✷", "✸", "✹", "✺", "❂", "❋", "❊", "❉", "✾", "✽", "✼", "✻", "✺", "✹", "✸", "✷", "✶", "✵", "✴", "❄", "❆", "❇", "❈", "❉", "❊", "❋", "☘", "⚘", "⚜", "❂"],
+    symbols: ["★", "☆", "✦", "✧", "✩", "✪", "✫", "✬", "✭", "✮", "✯", "✰", "✶", "✷", "✸", "✹", "✺", "❂", "❋", "❊", "❉", "✾", "✽", "✼", "✻", "✵", "✴", "❄", "❆", "❇", "❈", "☘", "⚘", "⚜"],
   },
    {
     name: "Hearts",
@@ -50,9 +50,9 @@ export default function SymbolsPage() {
         <div key={category.name}>
           <h2 className="text-2xl font-bold mb-4">{category.name}</h2>
           <div className="flex flex-wrap gap-2">
-            {category.symbols.map((symbol) => (
+            {category.symbols.map((symbol, index) => (
               <button
-                key={symbol}
+                key={`${symbol}-${index}`}
                 onClick={() => copyToClipboard(symbol)}
                 className="flex items-center justify-center w-12 h-12 bg-card border rounded-lg shadow-sm hover:bg-accent transition-colors text-2xl"
               >
