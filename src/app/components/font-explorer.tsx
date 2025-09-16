@@ -103,12 +103,22 @@ export default function FontExplorer() {
       
       <div className="mt-6 space-y-4">
           {paginatedResults.map((result) => (
-             <div key={result.style} className="rounded-lg border bg-white/80 backdrop-blur-sm text-card-foreground shadow-lg cursor-pointer hover:shadow-xl transition-shadow" onClick={() => copyToClipboard(result.text)}>
-             <div className="flex items-center justify-between p-4">
-               <p className="text-xl font-mono flex-grow pr-4">{result.text}</p>
-               <span className="text-xs text-muted-foreground">{result.style}</span>
-             </div>
-           </div>
+            <div key={result.style} className="rounded-lg border bg-white/80 backdrop-blur-sm text-card-foreground shadow-lg">
+              <div className="flex items-center justify-between p-4">
+                <p className="text-xl font-mono flex-grow pr-4">{result.text}</p>
+                <div className="flex items-center space-x-1">
+                  <Button variant="ghost" size="icon" onClick={() => copyToClipboard(result.text)} aria-label="Copy text">
+                    <Copy className="h-5 w-5" />
+                  </Button>
+                  <Button variant="ghost" size="icon" aria-label="Like font">
+                    <Heart className="h-5 w-5" />
+                  </Button>
+                </div>
+              </div>
+              <div className="px-4 pb-2">
+                <span className="text-xs text-muted-foreground">{result.style}</span>
+              </div>
+            </div>
           ))}
       </div>
 
