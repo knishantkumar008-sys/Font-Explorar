@@ -43,15 +43,6 @@ export default function RootLayout({
               <Button variant="ghost" asChild>
                 <Link href="/blog">Blog</Link>
               </Button>
-              <Button variant="ghost" asChild>
-                <Link href="/about">About</Link>
-              </Button>
-              <Button variant="ghost" asChild>
-                <Link href="/privacy">Privacy</Link>
-              </Button>
-              <Button variant="ghost" asChild>
-                <Link href="/contact">Contact</Link>
-              </Button>
             </nav>
           </header>
           <main className="flex-1 overflow-auto p-4 md:p-6">
@@ -59,6 +50,18 @@ export default function RootLayout({
               {children}
             </div>
           </main>
+          <footer className="mt-auto border-t bg-card">
+            <div className="container mx-auto flex flex-col md:flex-row items-center justify-between py-4 px-4 md:px-6 text-sm text-muted-foreground">
+              <p className="text-center md:text-left mb-2 md:mb-0">
+                &copy; {new Date().getFullYear()} Fancy Text Generator. All rights reserved.
+              </p>
+              <div className="flex items-center space-x-4">
+                <Link href="/about" className="hover:text-foreground">About</Link>
+                <Link href="/contact" className="hover:text-foreground">Contact</Link>
+                <Link href="/privacy" className="hover:text-foreground">Privacy Policy</Link>
+              </div>
+            </div>
+          </footer>
         </div>
         <Toaster />
       </body>
