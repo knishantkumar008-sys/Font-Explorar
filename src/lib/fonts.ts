@@ -42,6 +42,12 @@ export const fancyStyles = [
     { name: 'Newsquare Bracket Angle Frame', isDecorator: true, prefix: '〖', suffix: '〗', categories: ['Boxed', 'Cool'] },
     { name: 'Housed Style', isDecorator: true, prefix: '⌂', suffix: '⌂', categories: ['Boxed', 'Cute'] },
     { name: 'Fountain Style', isDecorator: true, prefix: '⛲', suffix: '⛲', categories: ['Boxed', 'Weird'] },
+    { name: 'Mythical', isDecorator: true, prefix: '༺', suffix: '༻', categories: ['Weird', 'Fancy'] },
+    { name: 'Alpha', mapping: { a: 'Λ', b: 'b', c: 'c', d: 'd', e: 'e', f: 'f', g: 'g', h: 'ḥ', i: 'i', j: 'j', k: 'k', l: 'l', m: 'm', n: 'n', o: 'o', p: 'p', q: 'q', r: 'r', s: 's', t: 't', u: 'u', v: 'v', w: 'w', x: 'x', y: 'y', z: 'z', A: 'Λ', B: 'B', C: 'C', D: 'D', E: 'E', F: 'F', G: 'G', H: 'Ḥ', I: 'I', J: 'J', K: 'K', L: 'L', M: 'M', N: 'N', O: 'O', P: 'P', Q: 'Q', R: 'R', S: 'S', T: 'T', U: 'U', V: 'V', W: 'W', X: 'X', Y: 'Y', Z: 'Z' }, categories: ['Weird'] },
+    { name: 'Liner', isDecorator: true, perChar: true, prefix: '-', suffix: '', categories: ['Weird'] },
+    { name: 'Echo', mapping: { a: 'a', b: 'b', c: 'ƈ', d: 'd', e: 'e', f: 'f', g: 'g', h: 'ԋ', i: 'i', j: 'j', k: 'k', l: 'l', m: 'm', n: 'n', o: 'σ', p: 'p', q: 'q', r: 'r', s: 's', t: 't', u: 'u', v: 'v', w: 'w', x: 'x', y: 'y', z: 'z', A: 'A', B: 'B', C: 'Ƈ', D: 'D', E: 'E', F: 'F', G: 'G', H: 'Ԋ', I: 'I', J: 'J', K: 'K', L: 'L', M: 'M', N: 'N', O: 'Σ', P: 'P', Q: 'Q', R: 'R', S: 'S', T: 'T', U: 'U', V: 'V', W: 'W', X: 'X', Y: 'Y', Z: 'Z' }, categories: ['Weird'] },
+    { name: 'Elegant', isDecorator: true, prefix: '⚜️', suffix: '⚜️', categories: ['Fancy'] },
+    { name: 'starsMid', isDecorator: true, prefix: '✨', suffix: '✨', categories: ['Fancy', 'Cute'] },
   ];
   
   export const fontCategories = ["All", "Popular", "Cool", "Cute", "Fancy", "Cursive", "Small", "Bold", "Boxed", "Hidden", "GLITCH", "STYLISH", "STRIKETHROUGH", "UPSIDE DOWN", "WEIRD", "UNDERLINE", "ITA"];
