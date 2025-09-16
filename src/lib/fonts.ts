@@ -76,3 +76,4 @@ export const fancyStyles = [
   
   export const fontCategories = ["All", "Popular", "Cool", "Cute", "Fancy", "Cursive", "Small", "Bold", "Boxed", "Joiners", "Lined", "Hidden", "GLITCH", "STYLISH", "STRIKETHROUGH", "UPSIDE DOWN", "WEIRD", "UNDERLINE", "ITA"];
   
+
