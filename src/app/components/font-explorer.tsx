@@ -3,7 +3,7 @@
 import { useState, useMemo, ChangeEvent } from 'react';
 import { useToast } from "@/hooks/use-toast"
 import { Button } from '@/components/ui/button';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { Card, CardContent } from '@/components/ui/card';
 import { ScrollArea } from '@/components/ui/scroll-area';
 import { Textarea } from '@/components/ui/textarea';
 import { Copy } from 'lucide-react';
@@ -88,7 +88,7 @@ export default function FontExplorer() {
 
 
   return (
-    <div className="flex-1 space-y-4 p-4 md:p-6 pt-6">
+    <>
       <Card>
         <CardContent className="p-4">
           <Textarea
@@ -102,7 +102,7 @@ export default function FontExplorer() {
       </Card>
       
       <div className="mt-6">
-        <ScrollArea className="h-[calc(100vh-280px)]">
+        <ScrollArea className="h-[calc(100vh-340px)]">
           <div className="space-y-4 pr-4">
             {fancyTextResults.map((result) => (
                <div key={result.style} className="rounded-lg border bg-card text-card-foreground shadow-sm">
@@ -118,6 +118,6 @@ export default function FontExplorer() {
           </div>
         </ScrollArea>
       </div>
-    </div>
+    </>
   );
 }

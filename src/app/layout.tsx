@@ -29,13 +29,22 @@ export default function RootLayout({
             </h1>
             <nav className="flex items-center space-x-2">
               <Button variant="ghost" asChild>
-                <Link href="/">Fancy Text</Link>
+                <Link href="/">Home</Link>
               </Button>
               <Button variant="ghost" asChild>
-                <Link href="/symbols">Symbols</Link>
+                <Link href="/font-changer">Font Changer</Link>
               </Button>
               <Button variant="ghost" asChild>
-                <Link href="/text-art">Text Art</Link>
+                <Link href="/blog">Blog</Link>
+              </Button>
+              <Button variant="ghost" asChild>
+                <Link href="/about">About</Link>
+              </Button>
+              <Button variant="ghost" asChild>
+                <Link href="/privacy">Privacy</Link>
+              </Button>
+              <Button variant="ghost" asChild>
+                <Link href="/contact">Contact</Link>
               </Button>
             </nav>
           </header>
