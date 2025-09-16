@@ -60,7 +60,14 @@ export const fancyStyles = [
     { name: 'Arrow Joiner', isDecorator: true, perChar: true, prefix: '', suffix: '>', categories: ['Joiners'] },
     { name: 'Black Florette Text', isDecorator: true, perChar: true, prefix: '', suffix: '✿', categories: ['Cute', 'Joiners'] },
     { name: 'Line Separator Block', isDecorator: true, perChar: true, prefix: '', suffix: '❘', categories: ['Joiners'] },
+    { name: 'Low Line', isDecorator: true, perChar: true, prefix: '', suffix: '_', categories: ['Lined'] },
+    { name: 'Double Macron', isDecorator: true, perChar: true, prefix: '', suffix: '͞', categories: ['Lined'] },
+    { name: 'Double Underline', isDecorator: true, perChar: true, prefix: '', suffix: '̳', categories: ['Lined'] },
+    { name: 'Tilde Overlay', isDecorator: true, perChar: true, prefix: '', suffix: '~', categories: ['Lined'] },
+    { name: 'Top Bottom', isDecorator: true, prefix: '̅', suffix: '̲', categories: ['Lined'] },
+    { name: 'Double Overline', isDecorator: true, prefix: '̿', suffix: '', categories: ['Lined'] },
+    { name: 'Arrow Underline', isDecorator: true, prefix: '', suffix: '➢', categories: ['Lined'] },
   ];
   
-  export const fontCategories = ["All", "Popular", "Cool", "Cute", "Fancy", "Cursive", "Small", "Bold", "Boxed", "Joiners", "Hidden", "GLITCH", "STYLISH", "STRIKETHROUGH", "UPSIDE DOWN", "WEIRD", "UNDERLINE", "ITA"];
+  export const fontCategories = ["All", "Popular", "Cool", "Cute", "Fancy", "Cursive", "Small", "Bold", "Boxed", "Joiners", "Lined", "Hidden", "GLITCH", "STYLISH", "STRIKETHROUGH", "UPSIDE DOWN", "WEIRD", "UNDERLINE", "ITA"];
   
