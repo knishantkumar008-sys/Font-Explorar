@@ -4,7 +4,6 @@ import { Toaster } from "@/components/ui/toaster"
 import './globals.css';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
-import { Search } from 'lucide-react';
 
 const inter = Inter({
   subsets: ['latin'],
@@ -27,9 +26,6 @@ export default function RootLayout({
         <div className="flex flex-col min-h-screen">
           <header className="flex h-20 items-center px-4 md:px-6">
             <Link href="/" className="flex items-center gap-2 mr-auto">
-                <div className="bg-primary rounded-full p-2">
-                  <Search className="h-5 w-5 text-primary-foreground" />
-                </div>
                 <span className="text-xl font-semibold tracking-tight text-white">
                   Fancy Text Generator
                 </span>
@@ -44,7 +40,7 @@ export default function RootLayout({
               <Button variant="ghost" asChild className="text-white hover:bg-white/10 hover:text-white">
                 <Link href="/text-art">Text Art</Link>
               </Button>
-              <Button variant="ghost" asChild className="text-white hover:bg-white/10 hover:text-white">
+              <Button variant="ghost" asChild className="text-white hover.bg-white/10 hover:text-white">
                 <Link href="/blog">Blog</Link>
               </Button>
             </nav>
