@@ -23,6 +23,12 @@ export const fancyStyles = [
     { name: 'Circled Text', isDecorator: true, perChar: true, prefix: '(', suffix: ')', categories: ['Cute']},
     { name: 'Happy Face', isDecorator: true, prefix: '(•‿•) ', suffix: ' (•‿•)', categories: ['Cute'] },
     { name: 'Asian Style', mapping: { a: '卂', b: '乃', c: '匚', d: '刀', e: '乇', f: '下', g: '厶', h: '卄', i: '工', j: '丁', k: '片', l: '乚', m: '爪', n: '冂', o: '口', p: '尸', q: '𝕄', r: '尺', s: '丂', t: '丁', u: '凵', v: 'リ', w: '山', x: '乂', y: '丫', z: '乙', A: '卂', B: '乃', C: '匚', D: '刀', E: '乇', F: '下', G: '厶', H: '卄', I: '工', J: '丁', K: '片', L: '乚', M: '爪', N: '冂', O: '口', P: '尸', Q: '𝕄', R: '尺', S: '丂', T: '丁', U: '凵', V: 'リ', W: '山', X: '乂', Y: '丫', Z: '乙'}, categories: ['Weird']},
+    { name: 'Prettified', isDecorator: true, prefix: '✨', suffix: '✨', categories: ['Fancy', 'Cute'] },
+    { name: 'StarLined', isDecorator: true, prefix: '⭐', suffix: '⭐', categories: ['Fancy', 'Cute'] },
+    { name: 'Rectangle side fade', isDecorator: true, prefix: '▓▒░∙∙∙ ', suffix: ' ∙∙∙░▒▓', categories: ['Cool', 'Fancy'] },
+    { name: 'Quotation', isDecorator: true, prefix: '❝', suffix: '❞', categories: ['Cool', 'Fancy'] },
+    { name: 'Cute Notes', isDecorator: true, prefix: '⁺˚*･༓☾ ', suffix: ' ☽༓･*˚⁺', categories: ['Cute', 'Fancy'] },
+    { name: 'Super Frog', isDecorator: true, prefix: '■━デ', suffix: '♬♣━■', categories: ['Cool', 'Weird'] },
   ];
   
   export const fontCategories = ["All", "Cool", "Cute", "Fancy", "Cursive", "Small", "Bold", "Hidden", "GLITCH", "STYLISH", "STRIKETHROUGH", "UPSIDE DOWN", "WEIRD", "UNDERLINE", "ITA"];
