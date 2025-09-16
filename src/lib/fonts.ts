@@ -1,4 +1,5 @@
 
+
 export const fancyStyles = [
     { name: 'Cursive', mapping: { a: '𝒶', b: '𝒷', c: '𝒸', d: '𝒹', e: '𝑒', f: '𝒻', g: '𝑔', h: '𝒽', i: '𝒾', j: '𝒿', k: '𝓀', l: '𝓁', m: '𝓂', n: '𝓃', o: '𝑜', p: '𝓅', q: '𝓆', r: '𝓇', s: '𝓈', t: '𝓉', u: '𝓊', v: '𝓋', w: '𝓌', x: '𝓍', y: '𝓎', z: '𝓏', A: '𝒜', B: '𝐵', C: '𝒞', D: '𝒟', E: '𝐸', F: '𐹶', G: '𝒢', H: '𝐻', I: '𝐼', J: '𝒥', K: '𝒦', L: '𝐿', M: '𝑀', N: '𝒩', O: '𝒪', P: '𝒫', Q: '𝒬', R: '𝑅', S: '𝒮', T: '𝒯', U: '𝒰', V: '𝒱', W: '𝒲', X: '𝒳', Y: '𝒴', Z: '𝒵' }, categories: ['Cursive', 'Fancy', 'Popular', 'Cool', 'ITA'] },
     { name: 'Bold Cursive', mapping: { a: '𝓪', b: '𝓫', c: '𝓬', d: '𝓭', e: '𝓮', f: '𝓯', g: '𝓰', h: '𝓱', i: '𝓲', j: '𝓳', k: '𝓴', l: '𝓵', m: '𝓶', n: '𝓷', o: '𝓸', p: '𝓹', q: '𝓺', r: '𝓻', s: '𝓼', t: '𝓽', u: '𝓾', v: '𝓿', w: '𝔀', x: '𝔁', y: '𝔂', z: '𝔃', A: '𝓐', B: '𝓑', C: '𝓒', D: '𝓓', E: '𝓔', F: '𝓕', G: '𝓖', H: '𝓗', I: '𝓘', J: '𝓙', K: '𝓚', L: '𝓛', M: '𝓜', N: '𝓝', O: '𝓞', P: '𝓟', Q: '𝓠', R: '𝓡', S: '𝓢', T: '𝓣', U: '𝓤', V: '𝓥', W: '𝓦', X: '𝓧', Y: '𝓨', Z: '𝓩' }, categories: ['Cursive', 'Fancy', 'Bold', 'ITA'] },
@@ -51,7 +52,7 @@ export const fancyStyles = [
     { name: 'Elegant', isDecorator: true, prefix: '⚜️', suffix: '⚜️', categories: ['Fancy', 'Symbolic'] },
     { name: 'Star Surround', isDecorator: true, prefix: '✧', suffix: '✧', categories: ['Fancy', 'Cute', 'Symbolic'] },
     { name: 'Kawaii Face', isDecorator: true, prefix: '(｡♥‿♥｡) ', suffix: ' (｡♥‿♥｡)', categories: ['Cute', 'Hearts'] },
-    { name: 'Age Old', mapping: {a: 'ꭺ', b: 'ꮃ', c: 'ꮯ', d: 'ꭰ', e: 'ꭼ', f: 'ꝭ', g: 'ꮀ', h: 'ꭿ', i: 'ꭵ', j: 'ꭻ', k: 'ꮶ', l: 'ꮮ', m: 'ꮇ', n: 'ꮑ', o: 'ꭴ', p: 'ꮲ', q: 'A', r: 'ꭱ', s: 'ꮪ', t: 'ꭲ', u: 'ꭎ', v: '', w: 'ꮃ', x: 'ꮝ', y: 'ꭹ', z: 'ꮓ', A: 'ꭺ', B: 'ꮃ', C: 'ꮯ', D: 'ꭰ', E: 'ꭼ', F: 'ꝭ', G: 'ꮀ', H: 'ꭿ', I: 'ꭵ', J: 'ꭻ', K: 'ꮶ', L: 'ꮮ', M: '', N: 'ꮑ', O: 'ꭴ', P: 'ꮲ', Q: 'A', R: 'ꭱ', S: 'ꮪ', T: 'ꭲ', U: 'ꭎ', V: '', W: 'ꮃ', X: 'ꮝ', Y: 'ꭹ', Z: '' }, categories: ['Small'] },
+    { name: 'Age Old', mapping: {a: 'ꭺ', b: 'ꮃ', c: 'ꮯ', d: 'ꭰ', e: 'ꭼ', f: 'ꝭ', g: 'ꮀ', h: 'ꭿ', i: 'ꭵ', j: 'ꭻ', k: 'ꮶ', l: 'ꮮ', m: 'ꮇ', n: 'ꮑ', o: 'ꭴ', p: 'ꮲ', q: 'A', r: 'ꭱ', s: 'ꮪ', t: 'ꭲ', u: 'ꭎ', v: '', w: 'ꮃ', x: 'ꮝ', y: 'ꭹ', z: 'ꮓ', A: 'ꭺ', B: 'ꮃ', C: 'ꮯ', D: 'ꭰ', E: 'ꭼ', F: 'ꝭ', G: 'ꮀ', H: 'ꭿ', I: 'ꭵ', J: 'ꭻ', K: 'ꮶ', L: 'ꮮ', M: '', N: '', O: 'ꭴ', P: 'ꮲ', Q: 'A', R: 'ꭱ', S: 'ꮪ', T: 'ꭲ', U: 'ꭎ', V: '', W: 'ꮃ', X: 'ꮝ', Y: 'ꭹ', Z: '' }, categories: ['Small'] },
     { name: 'Dot Joiner', isDecorator: true, perChar: true, prefix: '', suffix: '.', categories: ['Joiners'] },
     { name: 'Shade', isDecorator: true, perChar: true, prefix: '', suffix: '▓', categories: ['Joiners'] },
     { name: 'Cross Above', isDecorator: true, perChar: true, prefix: '', suffix: '͓̽', categories: ['Joiners', 'Weird'] },
@@ -86,7 +87,98 @@ export const fancyStyles = [
     { name: 'Lovedrops', isDecorator: true, prefix: '˚₊‧—̳͟͞͞♥', suffix: '♡‧₊˚', categories: ['Cute', 'Fancy', 'Hearts'] },
     { name: 'Butterfly', isDecorator: true, prefix: 'ʚїɞ', suffix: '♡‧₊˚', categories: ['Cute', 'Fancy', 'Hearts'] },
     { name: 'Cutie Pie', isDecorator: true, prefix: '(๑•ᴗ•๑)', suffix: '❤', categories: ['Cute', 'Hearts'] },
-    { name: 'Unblocked', isDecorator: true, prefix: '▓', suffix: '▓', categories: ['Boxed', 'Cool'] }
+    { name: 'Unblocked', isDecorator: true, prefix: '▓', suffix: '▓', categories: ['Boxed', 'Cool'] },
 ];
   
 export const fontCategories = ["All", "Popular", "Cool", "Cute", "Hearts", "Fancy", "Cursive", "Small", "Bold", "Boxed", "Joiners", "Lined", "Hidden", "GLITCH", "STYLISH", "STRIKETHROUGH", "UPSIDE DOWN", "Symbolic", "Weird", "UNDERLINE", "ITA", "Squiggle"];
+
+export const categoryDescriptions: Record<string, { title: string; content: string }> = {
+    All: {
+      title: "All Font Styles",
+      content: "Explore our full collection of unique and creative font styles. Whether you're looking for something fun, professional, or just plain weird, you'll find it here. Browse through the categories to discover the perfect text effect for your social media posts, messages, and more."
+    },
+    Popular: {
+      title: "Popular Fonts",
+      content: "Check out the font styles that are currently trending. These are the fonts that users love the most for their social media bios, captions, and comments. Stand out from the crowd with these eye-catching and popular text effects."
+    },
+    Cool: {
+      title: "Cool Text Generator",
+      content: "Generate cool and stylish text to use on social media platforms like Instagram, Facebook, and Twitter. Our cool text generator allows you to create unique and eye-catching text that will make your posts stand out."
+    },
+    Cute: {
+      title: "Cute Font Generator",
+      content: "Create adorable and charming text with our cute font generator. Perfect for adding a touch of sweetness to your messages, bios, and social media posts. Express your personality with these lovely and whimsical font styles."
+    },
+    Hearts: {
+      title: "Heart Fonts",
+      content: "Add a touch of love to your text with our heart-themed fonts. This collection features fonts decorated with various heart symbols, perfect for romantic messages, special occasions, or just showing some affection in your posts."
+    },
+    Fancy: {
+      title: "Fancy Text Generator",
+      content: "Make your text look fancy and elegant with our wide range of stylish fonts. This generator helps you create sophisticated and artistic text that you can use in your social media profiles, posts, and messages to impress your audience."
+    },
+    Cursive: {
+      title: "Cursive Text Generator",
+      content: "Generate elegant cursive text that you can copy and paste into your social media bios, comments, and posts. Cursive fonts add a personal and sophisticated touch, making your text look like beautiful handwriting."
+    },
+    Small: {
+      title: "Small Text Generator",
+      content: "Create small text for your social media profiles and posts. This collection includes subscript and superscript fonts that make your text appear smaller, perfect for adding fine print, footnotes, or just a unique stylistic touch."
+    },
+    Bold: {
+      title: "Bold Text Generator",
+      content: "Make your text stand out with our bold font generator. Bold text helps to emphasize key points and grab attention in your social media posts, bios, and messages. Choose from various bold styles to make your words more impactful."
+    },
+    Boxed: {
+      title: "Boxed Text Fonts",
+      content: "Surround your text with stylish boxes and borders. These fonts are perfect for creating headings, highlighting text, or just giving your content a structured and organized look. Copy and paste them easily into your posts."
+    },
+    Joiners: {
+      title: "Joiner Fonts",
+      content: "Create unique text effects using joiner characters. These special characters connect letters and words in interesting ways, allowing you to design text that is visually striking and unconventional. Perfect for creative social media updates."
+    },
+    Lined: {
+      title: "Lined Text Fonts",
+      content: "Add lines above, below, or through your text with these font styles. This category includes underline, strikethrough, and overline effects to give your text a variety of decorative and professional looks."
+    },
+    Hidden: {
+      title: "Hidden & Utility Fonts",
+      content: "This category contains utility fonts like Monospace. These are often used for specific formatting purposes and may not be as decorative as other styles, but they offer a clean and consistent look for your text."
+    },
+    GLITCH: {
+      title: "Glitch Text Generator",
+      content: "Create a corrupted, glitchy text effect with our Zalgo text generator. This style is perfect for making your text look spooky, chaotic, or just plain weird. It's a great way to grab attention and add a dramatic flair to your posts."
+    },
+    STYLISH: {
+      title: "Stylish Fonts",
+      content: "Discover a collection of chic and modern fonts that will make your text look incredibly stylish. Perfect for fashion bloggers, artists, and anyone who wants to add a touch of class to their social media presence."
+    },
+    STRIKETHROUGH: {
+      title: "Strikethrough Text",
+      content: "Generate text with a line through it. Strikethrough is often used to show that something has been edited or is no longer relevant, but it can also be used for stylistic effect in your social media posts and messages."
+    },
+    "UPSIDE DOWN": {
+      title: "Upside Down Text",
+      content: "Flip your text upside down with this fun and quirky font generator. Confuse your friends and add a playful twist to your messages and social media updates. It's a simple way to make your content more engaging and memorable."
+    },
+    Symbolic: {
+      title: "Symbolic Text",
+      content: "Use symbols and special characters to create unique and artistic text. This category includes fonts that replace letters with symbols, giving your text a mysterious or ancient feel. Perfect for themed posts and creative expressions."
+    },
+    Weird: {
+      title: "Weird & Crazy Fonts",
+      content: "Embrace the strange and unusual with our collection of weird fonts. These styles are designed to be unconventional and eye-catching, perfect for when you want to break the mold and post something truly unique and memorable."
+    },
+    UNDERLINE: {
+      title: "Underline Text",
+      content: "Add a line beneath your text with our underline font generator. This is a classic way to add emphasis to your text, making it perfect for headings, key points, and anything else you want to highlight in your posts."
+    },
+    ITA: {
+      title: "Italic Text",
+      content: "Italic text is a typographic style where characters are slanted to the right, providing a distinct visual effect compared to regular, upright text. As of now, Facebook and Instagram don't support text formatting like italics directly within the post or comment fields. However, you can use this Italic Generator. To italicize text on WhatsApp, you need to surround the text with underscores. For example, typing _italic text_ will display as italic text."
+    },
+    Squiggle: {
+      title: "Squiggle & Scribble Fonts",
+      content: "Add a playful, hand-drawn look to your text with squiggle and scribble fonts. These styles are perfect for creating a fun, informal, and artistic vibe in your social media posts, making your text look like it was doodled by hand."
+    }
+  };

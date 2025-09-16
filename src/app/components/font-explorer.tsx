@@ -5,7 +5,7 @@ import { useToast } from "@/hooks/use-toast"
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Copy, Heart } from 'lucide-react';
-import { fancyStyles, fontCategories } from '@/lib/fonts';
+import { fancyStyles, fontCategories, categoryDescriptions } from '@/lib/fonts';
 
 const ITEMS_PER_PAGE = 30;
 
@@ -68,6 +68,8 @@ export default function FontExplorer() {
     return { paginatedResults: results, totalPages };
   }, [inputText, selectedCategory, currentPage]);
 
+  const currentDescription = categoryDescriptions[selectedCategory];
+
 
   return (
     <>
@@ -109,6 +111,15 @@ export default function FontExplorer() {
            </div>
           ))}
       </div>
+
+      {currentDescription && (
+        <Card className="mt-6 shadow-lg rounded-2xl">
+          <CardContent className="p-6">
+            <h3 className="text-xl font-bold mb-2">{currentDescription.title}</h3>
+            <p className="text-muted-foreground whitespace-pre-wrap">{currentDescription.content}</p>
+          </CardContent>
+        </Card>
+      )}
 
       {totalPages > 1 && (
         <div className="flex justify-center items-center space-x-2 mt-6">
