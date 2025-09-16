@@ -8,7 +8,7 @@ import { PlaceHolderImages } from '@/lib/placeholder-images';
 
 export default function BlogPage() {
   const fontPosts = blogPosts.filter((post) => post.category === 'Font Blog');
-  const trendingPosts = blogPosts.filter((post) => post.category === 'Other Trending');
+  const trendingPosts = blogPosts.filter((post) => post.category === 'Trending News');
 
   const getImage = (id: string) => {
     return PlaceHolderImages.find((img) => img.id === id);
@@ -58,7 +58,7 @@ export default function BlogPage() {
       </div>
 
       <div>
-        <h2 className="text-3xl font-bold mb-6">Other Trending</h2>
+        <h2 className="text-3xl font-bold mb-6">Trending News</h2>
         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
           {trendingPosts.map((post) => {
             const image = getImage(post.imageId);

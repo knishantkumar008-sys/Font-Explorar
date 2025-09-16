@@ -3,7 +3,7 @@ export type BlogPost = {
   id: string;
   title: string;
   description: string;
-  category: 'Font Blog' | 'Other Trending';
+  category: 'Font Blog' | 'Trending News';
   imageId: string;
 };
 
@@ -33,14 +33,14 @@ export const blogPosts: BlogPost[] = [
     id: '4',
     title: 'Design Trends to Watch This Year',
     description: 'From bold typography to minimalist layouts, discover the top design trends that are shaping the digital landscape.',
-    category: 'Other Trending',
+    category: 'Trending News',
     imageId: 'blog-trends',
   },
   {
     id: '5',
     title: 'Creating a Strong Visual Identity for Your Brand',
     description: 'Learn how to use fonts, colors, and symbols to build a memorable and consistent brand identity online.',
-    category: 'Other Trending',
+    category: 'Trending News',
     imageId: 'blog-branding',
   },
 ];
