@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useMemo, ChangeEvent } from 'react';
+import { useState, useMemo, ChangeEvent, useEffect } from 'react';
 import { useToast } from "@/hooks/use-toast"
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
@@ -8,12 +8,57 @@ import { Copy, Heart, Settings, Sun, Layers } from 'lucide-react';
 import { fancyStyles, fontCategories, categoryDescriptions } from '@/lib/fonts';
 
 const ITEMS_PER_PAGE = 30;
+const LIKED_FONTS_KEY = 'likedFonts';
+const LIKED_DURATION = 12 * 60 * 60 * 1000; // 12 hours in milliseconds
+
+type LikedFont = {
+  name: string;
+  timestamp: number;
+};
 
 export default function FontExplorer() {
   const [inputText, setInputText] = useState('Font Style');
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [currentPage, setCurrentPage] = useState(1);
+  const [likedFonts, setLikedFonts] = useState<string[]>([]);
   const { toast } = useToast();
+
+  useEffect(() => {
+    const now = Date.now();
+    const storedLikedFonts = localStorage.getItem(LIKED_FONTS_KEY);
+    if (storedLikedFonts) {
+      const parsedFonts: LikedFont[] = JSON.parse(storedLikedFonts);
+      const validLikedFonts = parsedFonts
+        .filter(font => now - font.timestamp < LIKED_DURATION)
+        .map(font => font.name);
+      
+      const updatedLikedFonts = parsedFonts.filter(font => now - font.timestamp < LIKED_DURATION);
+      localStorage.setItem(LIKED_FONTS_KEY, JSON.stringify(updatedLikedFonts));
+
+      setLikedFonts(validLikedFonts);
+    }
+  }, []);
+
+  const toggleLike = (styleName: string) => {
+    const now = Date.now();
+    const storedLikedFonts = localStorage.getItem(LIKED_FONTS_KEY);
+    let currentLiked: LikedFont[] = storedLikedFonts ? JSON.parse(storedLikedFonts) : [];
+    
+    const fontIndex = currentLiked.findIndex(font => font.name === styleName);
+
+    if (fontIndex > -1) {
+      // Unlike
+      currentLiked.splice(fontIndex, 1);
+      setLikedFonts(prev => prev.filter(name => name !== styleName));
+    } else {
+      // Like
+      currentLiked.push({ name: styleName, timestamp: now });
+      setLikedFonts(prev => [...prev, styleName]);
+    }
+    
+    localStorage.setItem(LIKED_FONTS_KEY, JSON.stringify(currentLiked));
+  };
+
 
   const copyToClipboard = (text: string) => {
     navigator.clipboard.writeText(text);
@@ -51,24 +96,32 @@ export default function FontExplorer() {
     
     const stylesToRender = selectedCategory === 'All'
       ? fancyStyles
+      : selectedCategory === 'Liked'
+      ? fancyStyles.filter(style => likedFonts.includes(style.name))
       : fancyStyles.filter(style => style.categories?.includes(selectedCategory));
 
-    const totalPages = selectedCategory === 'All' ? Math.ceil(stylesToRender.length / ITEMS_PER_PAGE) : 1;
+    if (selectedCategory === 'Liked' && stylesToRender.length === 0) {
+      return { paginatedResults: [], totalPages: 0 };
+    }
+
+    const totalPagesValue = (selectedCategory === 'All' || selectedCategory === 'Liked') ? Math.ceil(stylesToRender.length / ITEMS_PER_PAGE) : 1;
 
     const startIndex = (currentPage - 1) * ITEMS_PER_PAGE;
     const endIndex = startIndex + ITEMS_PER_PAGE;
 
-    const paginatedStyles = selectedCategory === 'All' ? stylesToRender.slice(startIndex, endIndex) : stylesToRender;
+    const paginatedStyles = (selectedCategory === 'All' || selectedCategory === 'Liked') ? stylesToRender.slice(startIndex, endIndex) : stylesToRender;
 
     const results = paginatedStyles.map(style => ({
       style: style.name,
       text: convertToFancy(inputText, style.name),
     }));
 
-    return { paginatedResults: results, totalPages };
-  }, [inputText, selectedCategory, currentPage]);
+    return { paginatedResults: results, totalPages: totalPagesValue };
+  }, [inputText, selectedCategory, currentPage, likedFonts]);
 
-  const currentDescription = categoryDescriptions[selectedCategory];
+  const currentDescription = selectedCategory === 'Liked' 
+    ? { title: "Liked Fonts", content: "These are your favorite fonts. They will be stored for 12 hours." }
+    : categoryDescriptions[selectedCategory];
 
 
   return (
@@ -86,7 +139,9 @@ export default function FontExplorer() {
               />
           </div>
           <div className="flex flex-wrap items-center justify-center gap-x-4 gap-y-2 mt-4 text-sm">
-            <Heart className="h-5 w-5 text-primary" />
+            <button onClick={() => handleCategoryClick('Liked')} className={`hover:text-primary ${selectedCategory === 'Liked' ? 'text-primary' : ''}`}>
+              <Heart className="h-5 w-5" />
+            </button>
             {fontCategories.map(cat => (
               <button 
                 key={cat} 
@@ -102,24 +157,33 @@ export default function FontExplorer() {
       </Card>
       
       <div className="mt-6 space-y-4">
-          {paginatedResults.map((result) => (
-            <div key={result.style} className="rounded-lg border bg-white/80 backdrop-blur-sm text-card-foreground shadow-lg">
-              <div className="flex items-center justify-between p-4">
-                <p className="text-xl font-mono flex-grow pr-4">{result.text}</p>
-                <div className="flex items-center space-x-1">
-                  <Button variant="ghost" size="icon" onClick={() => copyToClipboard(result.text)} aria-label="Copy text">
-                    <Copy className="h-5 w-5" />
-                  </Button>
-                  <Button variant="ghost" size="icon" aria-label="Like font">
-                    <Heart className="h-5 w-5" />
-                  </Button>
+          {paginatedResults.length > 0 ? paginatedResults.map((result) => {
+            const isLiked = likedFonts.includes(result.style);
+            return (
+              <div key={result.style} className="rounded-lg border bg-white/80 backdrop-blur-sm text-card-foreground shadow-lg">
+                <div className="flex items-center justify-between p-4">
+                  <p className="text-xl font-mono flex-grow pr-4">{result.text}</p>
+                  <div className="flex items-center space-x-1">
+                    <Button variant="ghost" size="icon" onClick={() => copyToClipboard(result.text)} aria-label="Copy text">
+                      <Copy className="h-5 w-5" />
+                    </Button>
+                    <Button variant="ghost" size="icon" aria-label="Like font" onClick={() => toggleLike(result.style)}>
+                      <Heart className={`h-5 w-5 ${isLiked ? 'text-primary fill-current' : ''}`} />
+                    </Button>
+                  </div>
+                </div>
+                <div className="px-4 pb-2">
+                  <span className="text-xs text-muted-foreground">{result.style}</span>
                 </div>
               </div>
-              <div className="px-4 pb-2">
-                <span className="text-xs text-muted-foreground">{result.style}</span>
-              </div>
+            );
+          }) : (
+             <div className="text-center py-8">
+              <p className="text-muted-foreground">
+                {selectedCategory === 'Liked' ? "You haven't liked any fonts yet." : "No results found."}
+              </p>
             </div>
-          ))}
+          )}
       </div>
 
       {currentDescription && (
