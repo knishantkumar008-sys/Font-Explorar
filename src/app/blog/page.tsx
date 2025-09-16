@@ -18,8 +18,8 @@ export default function BlogPage() {
     <div className="p-4 md:p-6 space-y-12">
       <div className="text-center">
         <h1 className="text-4xl font-bold tracking-tight">Our Blog</h1>
-        <p className="text-lg text-muted-foreground mt-2">
-          Insights, tips, and trends in the world of typography and design.
+        <p className="text-lg text-muted-foreground mt-2 max-w-2xl mx-auto">
+          Welcome to the Font Explorer blog, your go-to source for typography tips, design inspiration, and the latest trends in the digital world.
         </p>
       </div>
 
