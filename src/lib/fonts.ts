@@ -29,7 +29,16 @@ export const fancyStyles = [
     { name: 'Quotation', isDecorator: true, prefix: '❝', suffix: '❞', categories: ['Cool', 'Fancy'] },
     { name: 'Cute Notes', isDecorator: true, prefix: '⁺˚*･༓☾ ', suffix: ' ☽༓･*˚⁺', categories: ['Cute', 'Fancy'] },
     { name: 'Super Frog', isDecorator: true, prefix: '■━デ', suffix: '♬♣━■', categories: ['Cool', 'Weird'] },
+    { name: 'Surrounded', isDecorator: true, prefix: '⦑', suffix: '⦒', categories: ['Boxed', 'Cool'] },
+    { name: 'Fenced', isDecorator: true, prefix: '[', suffix: ']', categories: ['Boxed', 'Cool'] },
+    { name: 'Thick Box', isDecorator: true, prefix: '⟦', suffix: '⟧', categories: ['Boxed', 'Cool'] },
+    { name: 'Integral', isDecorator: true, prefix: '∫', suffix: '∫', categories: ['Boxed', 'Weird'] },
+    { name: 'Moon', isDecorator: true, prefix: '☾', suffix: '☽', categories: ['Boxed', 'Cute'] },
+    { name: 'Tibetan Style', isDecorator: true, prefix: '࿓', suffix: '࿔', categories: ['Boxed', 'Weird'] },
+    { name: 'Newsquare Bracket Angle Frame', isDecorator: true, prefix: '〖', suffix: '〗', categories: ['Boxed', 'Cool'] },
+    { name: 'Housed Style', isDecorator: true, prefix: '⌂', suffix: '⌂', categories: ['Boxed', 'Cute'] },
+    { name: 'Fountain Style', isDecorator: true, prefix: '⛲', suffix: '⛲', categories: ['Boxed', 'Weird'] },
   ];
   
-  export const fontCategories = ["All", "Cool", "Cute", "Fancy", "Cursive", "Small", "Bold", "Hidden", "GLITCH", "STYLISH", "STRIKETHROUGH", "UPSIDE DOWN", "WEIRD", "UNDERLINE", "ITA"];
+  export const fontCategories = ["All", "Cool", "Cute", "Fancy", "Cursive", "Small", "Bold", "Boxed", "Hidden", "GLITCH", "STYLISH", "STRIKETHROUGH", "UPSIDE DOWN", "WEIRD", "UNDERLINE", "ITA"];
   
