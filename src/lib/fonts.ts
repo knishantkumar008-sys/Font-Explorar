@@ -23,7 +23,7 @@ export const fancyStyles = [
     { name: 'Small Caps', mapping: { a: 'ᴀ', b: 'ʙ', c: 'ᴄ', d: 'ᴅ', e: 'ᴇ', f: 'ꜰ', g: 'ɢ', h: 'ʜ', i: 'ɪ', j: 'ᴊ', k: 'ᴋ', l: 'ʟ', m: 'ᴍ', n: 'ɴ', o: 'ᴏ', p: 'ᴘ', q: 'ǫ', r: 'ʀ', s: 's', t: 'ᴛ', u: 'ᴜ', v: 'ᴠ', w: 'ᴡ', x: 'x', y: 'ʏ', z: 'ᴢ', A: 'A', B: 'B', C: 'C', D: 'D', E: 'E', F: 'F', G: 'G', H: 'H', I: 'I', J: 'J', K: 'K', L: 'L', M: 'M', N: 'N', O: 'O', P: 'P', Q: 'Q', R: 'R', S: 'S', T: 'T', U: 'U', V: 'V', W: 'W', X: 'X', Y: 'Y', Z: 'Z' }, categories: ['Small'] },
     { name: 'Zalgo', isDecorator: true, perChar: true, prefix: '', suffix: ' \u0366\u035a\u031e\u0316\u0334\u0318\u0319\u035f\u034e\u035e\u0323\u0353\u033d\u0305\u0362', categories: ['GLITCH', 'Weird'] },
     { name: 'Rusify', mapping: {a: 'а', c: 'с', e: 'е', f: 'f', g: 'g', h: 'н', n: 'п', o: 'о', p: 'р', r: 'г', t: 'т', x: 'х', y: 'у', A: 'А', B: 'В', C: 'С', E: 'Е', H: 'Н', K: 'К', M: 'М', O: 'О', P: 'Р', T: 'Т', X: 'Х'}, categories: ['Weird', 'Symbolic']},
-    { name: 'Hearts', isDecorator: true, prefix: '♥', suffix: '♥', categories: ['Cute'] },
+    { name: 'Hearts', isDecorator: true, prefix: '♥', suffix: '♥', categories: ['Cute', 'Hearts'] },
     { name: 'Underline', mapping: { a: 'a̲', b: 'b̲', c: 'c̲', d: 'd̲', e: 'e̲', f: 'f̲', g: 'g̲', h: 'h̲', i: 'i̲', j: 'j̲', k: 'k̲', l: 'l̲', m: 'm̲', n: 'n̲', o: 'o̲', p: 'p̲', q: 'q̲', r: 'r̲', s: 's̲', t: 't̲', u: 'u̲', v: 'v̲', w: 'w̲', x: 'x̲', y: 'y̲', z: 'z̲', A:'A', B:'B', C:'C', D:'D', E:'E', F:'F', G:'G', H:'H', I:'I', J:'J', K:'K', L:'L', M:'M', N:'N', O:'O', P:'P', Q:'Q', R:'R', S:'S', T:'T', U:'U', V:'V', W:'W', X:'X', Y:'Y', Z:'Z' }, categories: ['UNDERLINE', 'Popular'] },
     { name: 'Circled Text', isDecorator: true, perChar: true, prefix: '(', suffix: ')', categories: ['Cute']},
     { name: 'Happy Face', isDecorator: true, prefix: '(•‿•) ', suffix: ' (•‿•)', categories: ['Cute'] },
@@ -81,12 +81,16 @@ export const fancyStyles = [
     { name: 'Pencil', isDecorator: true, perChar: true, prefix: '', suffix: '\u0334', categories: ['Squiggle'] },
     { name: 'Scribble', mapping: { 'F': 'Բ', 'O': 'Ծ', 'N': 'Ռ', 'T': 'Ե', ' ': ' ', 'S': 'Տ', 'Y': 'Վ', 'L': 'Լ', 'E': 'Յ', 'f': 'բ', 'o': 'ծ', 'n': 'ռ', 't': 'ե', 's': 'տ', 'y': 'վ', 'l': 'լ', 'e': 'յ' }, categories: ['Squiggle'] },
     { name: 'Curlicue', mapping: { 'F': 'F', 'O': 'O', 'N': 'N', 'T': 'T', ' ': ' ', 'S': 'S', 'Y': 'Y', 'L': 'L', 'E': 'E', 'f': 'f', 'o': 'o', 'n': 'n', 't': 't', 's': 's', 'y': 'y', 'l': 'l', 'e': 'e' }, categories: ['Squiggle'] },
-    { name: 'Drawn', isDecorator: true, prefix: ' \u035d\u035d\u035d ', suffix: ' \u035d\u035d\u035d ', categories: ['Squiggle'] }
-
+    { name: 'Drawn', isDecorator: true, prefix: ' \u035d\u035d\u035d ', suffix: ' \u035d\u035d\u035d ', categories: ['Squiggle'] },
+    { name: 'Lovedrops', isDecorator: true, prefix: '˚₊‧—̳͟͞͞♥', suffix: '♡‧₊˚', categories: ['Cute', 'Fancy', 'Hearts'] },
+    { name: 'Butterfly', isDecorator: true, prefix: 'ʚїɞ', suffix: '♡‧₊˚', categories: ['Cute', 'Fancy', 'Hearts'] },
+    { name: 'Cutie Pie', isDecorator: true, prefix: '(๑•ᴗ•๑)', suffix: '❤', categories: ['Cute', 'Hearts'] },
+    { name: 'Unblocked', isDecorator: true, prefix: '▓', suffix: '▓', categories: ['Boxed', 'Cool'] }
   ];
   
-  export const fontCategories = ["All", "Popular", "Cool", "Cute", "Fancy", "Cursive", "Small", "Bold", "Boxed", "Joiners", "Lined", "Hidden", "GLITCH", "STYLISH", "STRIKETHROUGH", "UPSIDE DOWN", "Symbolic", "Weird", "UNDERLINE", "ITA", "Squiggle"];
+  export const fontCategories = ["All", "Popular", "Cool", "Cute", "Hearts", "Fancy", "Cursive", "Small", "Bold", "Boxed", "Joiners", "Lined", "Hidden", "GLITCH", "STYLISH", "STRIKETHROUGH", "UPSIDE DOWN", "Symbolic", "Weird", "UNDERLINE", "ITA", "Squiggle"];
   
+
 
 
 
