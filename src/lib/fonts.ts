@@ -75,11 +75,19 @@ export const fancyStyles = [
     { name: 'Mysterious', isDecorator: true, perChar: true, prefix: '', suffix: '\u0359', categories: ['Weird']},
     { name: "Bizarre", isDecorator: true, perChar: true, prefix: "", suffix: " \u0368\u033e" , categories: ["Weird"] },
     { name: 'Mini Zalgo', isDecorator: true, perChar: true, prefix: '', suffix: ' \u035f\u034e', categories: ['GLITCH', 'Weird'] },
-    { name: 'Freaky', isDecorator: true, prefix: '\u035a\u031e\u0316\u0334\u0318\u0319\u035f\u034e\u035e\u0323\u0353\u033d\u0305\u0362', suffix: '\u035a\u031e\u0316\u0334\u0318\u0319\u035f\u034e\u035e\u0323\u0353\u033d\u0305\u0362', categories: ['GLITCH', 'Weird'] }
+    { name: 'Freaky', isDecorator: true, prefix: '\u035a\u031e\u0316\u0334\u0318\u0319\u035f\u034e\u035e\u0323\u0353\u033d\u0305\u0362', suffix: '\u035a\u031e\u0316\u0334\u0318\u0319\u035f\u034e\u035e\u0323\u0353\u033d\u0305\u0362', categories: ['GLITCH', 'Weird'] },
+    { name: 'Scratch', isDecorator: true, perChar: true, prefix: '', suffix: '\u0336', categories: ['Squiggle'] },
+    { name: 'Doodle', mapping: { 'f': 'ⓕ', 'o': 'ⓞ', 'n': 'ⓝ', 't': 'ⓣ', ' ': ' ', 's': 'ⓢ', 'y': 'ⓨ', 'l': 'ⓛ', 'e': 'ⓔ', 'F': 'Ⓕ', 'O': 'Ⓞ', 'N': 'Ⓝ', 'T': 'Ⓣ', 'S': 'Ⓢ', 'Y': 'Ⓨ', 'L': 'Ⓛ', 'E': 'Ⓔ' }, categories: ['Squiggle'] },
+    { name: 'Pencil', isDecorator: true, perChar: true, prefix: '', suffix: '\u0334', categories: ['Squiggle'] },
+    { name: 'Scribble', mapping: { 'F': 'Բ', 'O': 'Ծ', 'N': 'Ռ', 'T': 'Ե', ' ': ' ', 'S': 'Տ', 'Y': 'Վ', 'L': 'Լ', 'E': 'Յ', 'f': 'բ', 'o': 'ծ', 'n': 'ռ', 't': 'ե', 's': 'տ', 'y': 'վ', 'l': 'լ', 'e': 'յ' }, categories: ['Squiggle'] },
+    { name: 'Curlicue', mapping: { 'F': 'F', 'O': 'O', 'N': 'N', 'T': 'T', ' ': ' ', 'S': 'S', 'Y': 'Y', 'L': 'L', 'E': 'E', 'f': 'f', 'o': 'o', 'n': 'n', 't': 't', 's': 's', 'y': 'y', 'l': 'l', 'e': 'e' }, categories: ['Squiggle'] },
+    { name: 'Drawn', isDecorator: true, prefix: ' \u035d\u035d\u035d ', suffix: ' \u035d\u035d\u035d ', categories: ['Squiggle'] }
+
   ];
   
-  export const fontCategories = ["All", "Popular", "Cool", "Cute", "Fancy", "Cursive", "Small", "Bold", "Boxed", "Joiners", "Lined", "Hidden", "GLITCH", "STYLISH", "STRIKETHROUGH", "UPSIDE DOWN", "Symbolic", "Weird", "UNDERLINE", "ITA"];
+  export const fontCategories = ["All", "Popular", "Cool", "Cute", "Fancy", "Cursive", "Small", "Bold", "Boxed", "Joiners", "Lined", "Hidden", "GLITCH", "STYLISH", "STRIKETHROUGH", "UPSIDE DOWN", "Symbolic", "Weird", "UNDERLINE", "ITA", "Squiggle"];
   
+
 
 
 
