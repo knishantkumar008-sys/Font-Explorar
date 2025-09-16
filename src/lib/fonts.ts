@@ -21,7 +21,7 @@ export const fancyStyles = [
     { name: 'Subscript', mapping: { a: 'ₐ', b: '♭', c: '꜀', d: 'ᑯ', e: 'ₑ', f: 'բ', g: '₉', h: 'ₕ', i: 'ᵢ', j: 'ⱼ', k: 'ₖ', l: 'ₗ', m: 'ₘ', n: 'ₙ', o: 'ₒ', p: 'ₚ', q: '૧', r: 'ᵣ', s: 'ₛ', t: 'ₜ', u: 'ᵤ', v: 'ᵥ', w: 'ₓ', x: 'ₓ', y: 'ᵧ', z: '₂', A: 'ₐ', B: '♭', C: '꜀', D: 'ᑯ', E: '', F: 'բ', G: '₉', H: 'ₕ', I: 'ᵢ', J: 'ⱼ', K: 'ₖ', L: 'ₗ', M: 'ₘ', N: 'ₙ', O: 'ₒ', P: 'ₚ', Q: '૧', R: 'ᵣ', S: 'ₛ', T: 'ₜ', U: 'ᵤ', V: 'ᵥ', W: 'ₓ', X: 'ₓ', Y: 'ᵧ', Z: '₂' }, categories: ['Small'] },
     { name: 'Strikethrough', mapping: { a: 'a̶', b: 'b̶', c: 'c̶', d: 'd̶', e: 'e̶', f: 'f̶', g: 'g̶', h: 'h̶', i: 'i̶', j: 'j̶', k: 'k̶', l: 'l̶', m: 'm̶', n: 'n̶', o: 'o̶', p: 'p̶', q: 'q̶', r: 'r̶', s: 's̶', t: 't̶', u: 'u̶', v: 'v̶', w: 'w̶', x: 'x̶', y: 'y̶', z: 'z̶', A: 'A̶', B: 'B̶', C: 'C̶', D: 'D̶', E: 'E̶', F: 'F̶', G: 'G̶', H: 'H̶', I: 'I̶', J: 'J̶', K: 'K̶', L: 'L̶', M: 'M̶', N: 'N̶', O: 'O̶', P: 'P̶', Q: 'Q̶', R: 'R̶', S: 'S̶', T: 'T̶', U: 'U̶', V: 'V̶', W: 'W̶', X: 'X̶', Y: 'Y̶', Z: 'Z̶' }, categories: ['STRIKETHROUGH', 'Popular', 'Joiners', 'Lined'] },
     { name: 'Small Caps', mapping: { a: 'ᴀ', b: 'ʙ', c: 'ᴄ', d: 'ᴅ', e: 'ᴇ', f: 'ꜰ', g: 'ɢ', h: 'ʜ', i: 'ɪ', j: 'ᴊ', k: 'ᴋ', l: 'ʟ', m: 'ᴍ', n: 'ɴ', o: 'ᴏ', p: 'ᴘ', q: 'ǫ', r: 'ʀ', s: 's', t: 'ᴛ', u: 'ᴜ', v: 'ᴠ', w: 'ᴡ', x: 'x', y: 'ʏ', z: 'ᴢ', A: 'A', B: 'B', C: 'C', D: 'D', E: 'E', F: 'F', G: 'G', H: 'H', I: 'I', J: 'J', K: 'K', L: 'L', M: 'M', N: 'N', O: 'O', P: 'P', Q: 'Q', R: 'R', S: 'S', T: 'T', U: 'U', V: 'V', W: 'W', X: 'X', Y: 'Y', Z: 'Z' }, categories: ['Small'] },
-    { name: 'Zalgo', mapping: { a: 'a͆', b: 'b͆', c: 'c͆', d: 'd͆', e: 'e͆', f: 'f͆', g: 'g͆', h: 'h͆', i: 'i͆', j: 'j͆', k: 'k͆', l: 'l͆', m: 'm͆', n: 'n͆', o: 'o͆', p: 'p͆', q: 'q͆', r: 'r͆', s: 's͆', t: 't͆', u: 'u͆', v: 'v͆', w: 'w͆', x: 'x͆', y: 'y͆', z: 'z͆', A:'A', B:'B', C:'C', D:'D', E:'E', F:'F', G:'G', H:'H', I:'I', J:'J', K:'K', L:'L', M:'M', N:'N', O:'O', P:'P', Q:'Q', R:'R', S:'S', T:'T', U:'U', V:'V', W:'W', X:'X', Y:'Y', Z:'Z' }, categories: ['GLITCH', 'Weird'] },
+    { name: 'Zalgo', isDecorator: true, perChar: true, prefix: '', suffix: ' \u0366\u035a\u031e\u0316\u0334\u0318\u0319\u035f\u034e\u035e\u0323\u0353\u033d\u0305\u0362', categories: ['GLITCH', 'Weird'] },
     { name: 'Rusify', mapping: {a: 'а', c: 'с', e: 'е', f: 'f', g: 'g', h: 'н', n: 'п', o: 'о', p: 'р', r: 'г', t: 'т', x: 'х', y: 'у', A: 'А', B: 'В', C: 'С', E: 'Е', H: 'Н', K: 'К', M: 'М', O: 'О', P: 'Р', T: 'Т', X: 'Х'}, categories: ['Weird', 'Symbolic']},
     { name: 'Hearts', isDecorator: true, prefix: '♥', suffix: '♥', categories: ['Cute'] },
     { name: 'Underline', mapping: { a: 'a̲', b: 'b̲', c: 'c̲', d: 'd̲', e: 'e̲', f: 'f̲', g: 'g̲', h: 'h̲', i: 'i̲', j: 'j̲', k: 'k̲', l: 'l̲', m: 'm̲', n: 'n̲', o: 'o̲', p: 'p̲', q: 'q̲', r: 'r̲', s: 's̲', t: 't̲', u: 'u̲', v: 'v̲', w: 'w̲', x: 'x̲', y: 'y̲', z: 'z̲', A:'A', B:'B', C:'C', D:'D', E:'E', F:'F', G:'G', H:'H', I:'I', J:'J', K:'K', L:'L', M:'M', N:'N', O:'O', P:'P', Q:'Q', R:'R', S:'S', T:'T', U:'U', V:'V', W:'W', X:'X', Y:'Y', Z:'Z' }, categories: ['UNDERLINE', 'Popular'] },
@@ -73,11 +73,14 @@ export const fancyStyles = [
     { name: 'Zombies', mapping: { o: 'σ', l: 'Ł', e: 'є', y: 'ψ', A: 'Λ', B: 'B', C: 'C', D: 'D', E: 'Σ', F: 'F', G: 'G', H: 'H', I: 'I', J: 'J', K: 'K', L: 'Ł', M: 'M', N: 'N', O: 'Φ', P: 'P', Q: 'Q', R: 'R', S: 'S', T: 'T', U: 'U', V: 'V', W: 'W', X: 'X', Y: 'ψ', Z: 'Z'}, categories: ['Weird']},
     { name: 'Creepy', isDecorator: true, perChar: true, prefix: '', suffix: '\u0301\u030c', categories: ['Weird']},
     { name: 'Mysterious', isDecorator: true, perChar: true, prefix: '', suffix: '\u0359', categories: ['Weird']},
-    { name: "Bizarre", isDecorator: true, perChar: true, prefix: "", suffix: " \u0368\u033e" , categories: ["Weird"] }
+    { name: "Bizarre", isDecorator: true, perChar: true, prefix: "", suffix: " \u0368\u033e" , categories: ["Weird"] },
+    { name: 'Mini Zalgo', isDecorator: true, perChar: true, prefix: '', suffix: ' \u035f\u034e', categories: ['GLITCH', 'Weird'] },
+    { name: 'Freaky', isDecorator: true, prefix: '\u035a\u031e\u0316\u0334\u0318\u0319\u035f\u034e\u035e\u0323\u0353\u033d\u0305\u0362', suffix: '\u035a\u031e\u0316\u0334\u0318\u0319\u035f\u034e\u035e\u0323\u0353\u033d\u0305\u0362', categories: ['GLITCH', 'Weird'] }
   ];
   
   export const fontCategories = ["All", "Popular", "Cool", "Cute", "Fancy", "Cursive", "Small", "Bold", "Boxed", "Joiners", "Lined", "Hidden", "GLITCH", "STYLISH", "STRIKETHROUGH", "UPSIDE DOWN", "Symbolic", "Weird", "UNDERLINE", "ITA"];
   
+
 
 
 
