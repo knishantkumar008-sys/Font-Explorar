@@ -7,9 +7,12 @@ import { Card, CardContent } from '@/components/ui/card';
 import { Copy, Heart } from 'lucide-react';
 import { fancyStyles, fontCategories } from '@/lib/fonts';
 
+const ITEMS_PER_PAGE = 30;
+
 export default function FontExplorer() {
   const [inputText, setInputText] = useState('Font Style');
   const [selectedCategory, setSelectedCategory] = useState('All');
+  const [currentPage, setCurrentPage] = useState(1);
   const { toast } = useToast();
 
   const copyToClipboard = (text: string) => {
@@ -39,30 +42,31 @@ export default function FontExplorer() {
   }
 
   const handleCategoryClick = (category: string) => {
-    if (category === 'All') {
-      setSelectedCategory('All');
-      return;
-    }
     setSelectedCategory(category);
-    const firstStyleInCategory = fancyStyles.find(style => style.categories?.includes(category));
-    if (firstStyleInCategory) {
-      const convertedText = convertToFancy(inputText, firstStyleInCategory.name);
-      // This state update might not be needed if we don't want to change the input text itself
-    }
+    setCurrentPage(1); // Reset to first page on category change
   };
 
-  const fancyTextResults = useMemo(() => {
-    if (!inputText) return [];
+  const { paginatedResults, totalPages } = useMemo(() => {
+    if (!inputText) return { paginatedResults: [], totalPages: 0 };
     
     const stylesToRender = selectedCategory === 'All'
       ? fancyStyles
       : fancyStyles.filter(style => style.categories?.includes(selectedCategory));
 
-    return stylesToRender.map(style => ({
+    const totalPages = selectedCategory === 'All' ? Math.ceil(stylesToRender.length / ITEMS_PER_PAGE) : 1;
+
+    const startIndex = (currentPage - 1) * ITEMS_PER_PAGE;
+    const endIndex = startIndex + ITEMS_PER_PAGE;
+
+    const paginatedStyles = selectedCategory === 'All' ? stylesToRender.slice(startIndex, endIndex) : stylesToRender;
+
+    const results = paginatedStyles.map(style => ({
       style: style.name,
       text: convertToFancy(inputText, style.name),
     }));
-  }, [inputText, selectedCategory]);
+
+    return { paginatedResults: results, totalPages };
+  }, [inputText, selectedCategory, currentPage]);
 
 
   return (
@@ -96,7 +100,7 @@ export default function FontExplorer() {
       </Card>
       
       <div className="mt-6 space-y-4">
-          {fancyTextResults.map((result) => (
+          {paginatedResults.map((result) => (
              <div key={result.style} className="rounded-lg border bg-white/80 backdrop-blur-sm text-card-foreground shadow-lg cursor-pointer hover:shadow-xl transition-shadow" onClick={() => copyToClipboard(result.text)}>
              <div className="flex items-center justify-between p-4">
                <p className="text-xl font-mono flex-grow pr-4">{result.text}</p>
@@ -105,6 +109,37 @@ export default function FontExplorer() {
            </div>
           ))}
       </div>
+
+      {totalPages > 1 && (
+        <div className="flex justify-center items-center space-x-2 mt-6">
+          <Button
+            variant="outline"
+            size="sm"
+            onClick={() => setCurrentPage(prev => Math.max(prev - 1, 1))}
+            disabled={currentPage === 1}
+          >
+            Previous
+          </Button>
+          {Array.from({ length: totalPages }, (_, i) => i + 1).map(page => (
+            <Button
+              key={page}
+              variant={currentPage === page ? 'default' : 'outline'}
+              size="sm"
+              onClick={() => setCurrentPage(page)}
+            >
+              {page}
+            </Button>
+          ))}
+          <Button
+            variant="outline"
+            size="sm"
+            onClick={() => setCurrentPage(prev => Math.min(prev + 1, totalPages))}
+            disabled={currentPage === totalPages}
+          >
+            Next
+          </Button>
+        </div>
+      )}
     </>
   );
 }
