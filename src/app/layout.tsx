@@ -34,6 +34,9 @@ export default function RootLayout({
               <Button variant="ghost" asChild>
                 <Link href="/symbols">Symbols</Link>
               </Button>
+              <Button variant="ghost" asChild>
+                <Link href="/text-art">Text Art</Link>
+              </Button>
             </nav>
           </header>
           <main className="flex-1 overflow-auto">
