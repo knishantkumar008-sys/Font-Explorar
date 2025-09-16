@@ -1,9 +1,15 @@
 import type { Metadata } from 'next';
+import { Inter } from 'next/font/google';
 import { Toaster } from "@/components/ui/toaster"
 import './globals.css';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { Search } from 'lucide-react';
+
+const inter = Inter({
+  subsets: ['latin'],
+  variable: '--font-inter',
+});
 
 export const metadata: Metadata = {
   title: 'Fancy Text Generator',
@@ -17,12 +23,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet" />
-      </head>
-      <body className="font-body antialiased">
+      <body className={`${inter.variable} font-body antialiased`}>
         <div className="flex flex-col min-h-screen">
           <header className="flex h-20 items-center px-4 md:px-6">
             <Link href="/" className="flex items-center gap-2 mr-auto">
@@ -38,7 +39,7 @@ export default function RootLayout({
                 <Link href="/">Home</Link>
               </Button>
               <Button variant="ghost" asChild className="text-white hover:bg-white/10 hover:text-white">
-                <Link href="/font">Font Changer</Link>
+                <Link href="/">Font Changer</Link>
               </Button>
               <Button variant="ghost" asChild className="text-white hover:bg-white/10 hover:text-white">
                 <Link href="/symbols">Symbols</Link>
