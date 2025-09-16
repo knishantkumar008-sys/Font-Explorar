@@ -30,7 +30,7 @@ export default function RootLayout({
                   <Search className="h-5 w-5 text-primary-foreground" />
                 </div>
                 <span className="text-xl font-semibold tracking-tight text-white">
-                  instafonts.in
+                  Fancy Text Generator
                 </span>
             </Link>
             <nav className="flex items-center space-x-2">
