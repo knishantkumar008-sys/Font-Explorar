@@ -4,8 +4,9 @@ import { useState, useTransition, useMemo, ChangeEvent, CSSProperties } from 're
 import type { FontData } from '@/lib/fonts';
 import { fonts } from '@/lib/fonts';
 import { suggestFontColors } from '@/ai/flows/suggest-font-colors';
+import { generateFancyText, type GenerateFancyTextOutput } from '@/ai/flows/generate-fancy-text';
 import { Button } from '@/components/ui/button';
-import { Card, CardContent } from '@/components/ui/card';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Label } from '@/components/ui/label';
 import { ScrollArea } from '@/components/ui/scroll-area';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
@@ -15,7 +16,7 @@ import { Textarea } from '@/components/ui/textarea';
 import { Tooltip, TooltipContent, TooltipTrigger } from '@/components/ui/tooltip';
 import { useToast } from "@/hooks/use-toast"
 import { AppIcon } from '@/app/components/icons';
-import { Palette, Download, Loader2 } from 'lucide-react';
+import { Palette, Download, Loader2, Wand2, Copy } from 'lucide-react';
 
 export default function FontExplorer() {
   const [previewText, setPreviewText] = useState('The quick brown fox jumps over the lazy dog.');
@@ -25,8 +26,11 @@ export default function FontExplorer() {
   const [textColor, setTextColor] = useState('#10161A');
   const [backgroundColor, setBackgroundColor] = useState('#E8EAF6');
   const [suggestedColors, setSuggestedColors] = useState<string[]>([]);
+  const [fancyText, setFancyText] = useState('');
+  const [fancyTextResults, setFancyTextResults] = useState<GenerateFancyTextOutput['fancyTexts']>([]);
 
-  const [isPending, startTransition] = useTransition();
+  const [isSuggestingColors, startSuggestingColors] = useTransition();
+  const [isGeneratingFancyText, startGeneratingFancyText] = useTransition();
   const { toast } = useToast();
 
   const handleFontChange = (fontName: string) => {
@@ -40,7 +44,7 @@ export default function FontExplorer() {
   };
 
   const handleGetSuggestedColors = () => {
-    startTransition(async () => {
+    startSuggestingColors(async () => {
       try {
         const result = await suggestFontColors({
           fontName: selectedFont.name,
@@ -55,6 +59,30 @@ export default function FontExplorer() {
           description: "Could not fetch color suggestions. Please try again.",
         })
       }
+    });
+  };
+
+  const handleGenerateFancyText = () => {
+    startGeneratingFancyText(async () => {
+      try {
+        const result = await generateFancyText({ text: fancyText });
+        setFancyTextResults(result.fancyTexts);
+      } catch (error) {
+        console.error('Failed to generate fancy text:', error);
+        toast({
+          variant: 'destructive',
+          title: 'AI Error',
+          description: 'Could not generate fancy text. Please try again.',
+        });
+      }
+    });
+  };
+
+  const copyToClipboard = (text: string) => {
+    navigator.clipboard.writeText(text);
+    toast({
+      title: 'Copied!',
+      description: 'The text has been copied to your clipboard.',
     });
   };
 
@@ -173,8 +201,8 @@ export default function FontExplorer() {
                         </div>
                       </div>
                       <div>
-                        <Button onClick={handleGetSuggestedColors} disabled={isPending} className="w-full">
-                          {isPending ? <Loader2 className="animate-spin" /> : <Palette />}
+                        <Button onClick={handleGetSuggestedColors} disabled={isSuggestingColors} className="w-full">
+                          {isSuggestingColors ? <Loader2 className="animate-spin" /> : <Palette />}
                           Suggest Text Colors with AI
                         </Button>
                         {suggestedColors.length > 0 && (
@@ -214,13 +242,55 @@ export default function FontExplorer() {
 
           <SidebarInset>
             <main className="flex-1 overflow-auto p-4 md:p-8" style={{ backgroundColor }}>
-              <Textarea
-                value={previewText}
-                onChange={(e) => setPreviewText(e.target.value)}
-                style={previewStyle as CSSProperties}
-                className="h-full min-h-[calc(100vh-10rem)] w-full resize-none border-0 bg-transparent p-0 text-4xl shadow-none ring-0 focus-visible:ring-0"
-                placeholder="Type here to preview..."
-              />
+              <div className="grid grid-rows-[auto,1fr] gap-8 h-full">
+                <Textarea
+                  value={previewText}
+                  onChange={(e) => setPreviewText(e.target.value)}
+                  style={previewStyle as CSSProperties}
+                  className="h-full min-h-48 w-full resize-none border-0 bg-transparent p-0 text-4xl shadow-none ring-0 focus-visible:ring-0"
+                  placeholder="Type here to preview..."
+                />
+
+                <Card>
+                  <CardHeader>
+                    <CardTitle>Fancy Text Generator</CardTitle>
+                  </CardHeader>
+                  <CardContent className="space-y-4">
+                    <Textarea
+                      value={fancyText}
+                      onChange={(e) => setFancyText(e.target.value)}
+                      placeholder="Enter text for fancy styles..."
+                      className="resize-y"
+                    />
+                    <Button onClick={handleGenerateFancyText} disabled={isGeneratingFancyText || !fancyText}>
+                      {isGeneratingFancyText ? <Loader2 className="animate-spin" /> : <Wand2 />}
+                      Generate Fancy Text
+                    </Button>
+                    
+                    {isGeneratingFancyText && <div className="text-center">Generating styles...</div>}
+
+                    {fancyTextResults.length > 0 && (
+                      <ScrollArea className="h-96">
+                        <div className="space-y-4 pr-4">
+                          {fancyTextResults.map((result) => (
+                            <Card key={result.style}>
+                              <CardHeader className="flex flex-row items-center justify-between p-4">
+                                <CardTitle className="text-lg">{result.style}</CardTitle>
+                                <Button variant="ghost" size="icon" onClick={() => copyToClipboard(result.text)}>
+                                  <Copy className="h-4 w-4" />
+                                </Button>
+                              </CardHeader>
+                              <CardContent className="p-4 pt-0">
+                                <p className="text-xl font-mono bg-muted p-3 rounded-md overflow-x-auto">{result.text}</p>
+                              </CardContent>
+                            </Card>
+                          ))}
+                        </div>
+                      </ScrollArea>
+                    )}
+                  </CardContent>
+                </Card>
+              </div>
             </main>
           </SidebarInset>
         </div>
