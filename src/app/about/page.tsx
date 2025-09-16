@@ -1,6 +1,8 @@
 
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Users, Sparkles, Heart, Rss } from "lucide-react";
+import Link from "next/link";
+import { Button } from "@/components/ui/button";
 
 export default function AboutPage() {
   return (
@@ -12,7 +14,7 @@ export default function AboutPage() {
         </p>
       </div>
 
-      <div className="grid md:grid-cols-3 gap-6 text-left">
+      <div className="grid md:grid-cols-2 gap-6 text-left">
         <Card className="shadow-lg rounded-2xl">
           <CardHeader>
             <CardTitle className="flex items-center gap-2">
@@ -36,41 +38,31 @@ export default function AboutPage() {
           </CardHeader>
           <CardContent className="space-y-4 text-card-foreground">
             <p>
-              Font Explorer offers a comprehensive suite of tools including real-time font previews, style adjustments for weight and size, and color customization for both text and background. Our goal is to give you a complete picture of how a font will look and feel in your design.
+              Font Explorer offers a comprehensive suite of tools including real-time font previews, style adjustments for weight and size, and color customization. Our goal is to give you a complete picture of how a font will look and feel in your design.
             </p>
           </CardContent>
         </Card>
-
+      </div>
+      
+      <div className="grid md:grid-cols-1 gap-6 text-left">
         <Card className="shadow-lg rounded-2xl">
           <CardHeader>
             <CardTitle className="flex items-center gap-2">
-              <Heart className="h-6 w-6 text-primary" />
-              Our Commitment
+              <Rss className="h-6 w-6 text-primary" />
+              Explore Our Blog
             </CardTitle>
           </CardHeader>
           <CardContent className="space-y-4 text-card-foreground">
             <p>
-              We are dedicated to providing a high-quality, user-friendly experience. Our platform is designed to be fast, responsive, and accessible on any device. We are constantly working to expand our font library and improve our tools to meet your creative needs.
+              Visit our blog for typography tips, design inspiration, font pairing guides, and interviews with industry professionals. It's your go-to resource for staying creative and informed in the world of design.
             </p>
+            <Button asChild>
+                <Link href="/blog">Read The Blog</Link>
+            </Button>
           </CardContent>
         </Card>
       </div>
 
-      <div className="grid md:grid-cols-1 gap-6 text-left">
-        <Card className="shadow-lg rounded-2xl">
-            <CardHeader>
-                <CardTitle className="flex items-center gap-2">
-                    <Rss className="h-6 w-6 text-primary" />
-                    Stay Tuned!
-                </CardTitle>
-            </CardHeader>
-            <CardContent>
-                <p  className="text-card-foreground">
-                    We're excited to announce that we'll soon be launching a blog! It will be your go-to resource for typography tips, design inspiration, font pairing guides, and interviews with industry professionals. Keep an eye out for updates!
-                </p>
-            </CardContent>
-        </Card>
-      </div>
 
        <div className="pt-8">
           <h2 className="text-2xl font-bold mb-4">Thank You for Visiting!</h2>
