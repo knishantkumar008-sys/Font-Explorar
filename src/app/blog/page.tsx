@@ -19,7 +19,7 @@ export default function BlogPage() {
       <div className="text-center">
         <h1 className="text-4xl font-bold tracking-tight">Our Blog</h1>
         <p className="text-lg text-muted-foreground mt-2 max-w-2xl mx-auto">
-          Welcome to the Font Explorer blog, your go-to source for typography tips, design inspiration, and the latest trends in the digital world.
+          Welcome to our little corner of the internet! Here, we dive deep into the world of typography and keep you updated on the latest design trends. Whether you're a font fanatic or just looking for some creative inspiration, you've come to the right place.
         </p>
       </div>
 
