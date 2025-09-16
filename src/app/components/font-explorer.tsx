@@ -83,7 +83,7 @@ export default function FontExplorer() {
     <>
       <Card className="shadow-2xl rounded-2xl">
         <CardContent className="p-6">
-          <h2 className="text-2xl font-bold text-center mb-4">Font Changer</h2>
+          <h2 className="text-2xl font-bold text-center mb-4">Font</h2>
           <div className="relative p-1 bg-gradient-to-r from-pink-500 via-yellow-500 to-cyan-500 rounded-lg">
              <textarea
                 value={inputText}
