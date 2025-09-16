@@ -4,7 +4,7 @@ import { useState, useMemo, ChangeEvent } from 'react';
 import { useToast } from "@/hooks/use-toast"
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
-import { Copy, Heart } from 'lucide-react';
+import { Copy, Heart, Settings, Sun, Layers } from 'lucide-react';
 import { fancyStyles, fontCategories, categoryDescriptions } from '@/lib/fonts';
 
 const ITEMS_PER_PAGE = 30;
@@ -151,6 +151,53 @@ export default function FontExplorer() {
           </Button>
         </div>
       )}
+      <div className="mt-8 space-y-8 text-center text-card-foreground bg-white/80 backdrop-blur-sm p-6 md:p-8 rounded-2xl shadow-lg">
+        <div className="max-w-3xl mx-auto">
+            <h2 className="text-3xl font-bold mb-4">About Our Fonts</h2>
+            <p className="text-muted-foreground">
+                Welcome to our fonts generator! You can easily copy and paste these fonts into your social media bio. Our website is designed to generate cool symbols and fancy text, perfect for making your profile more professional and appealing. You can transform your traditional text into stylish fonts, including cursive, bold, italics, and over 100 other styles. We use Unicode characters to generate text symbols that are supported across all major social media platforms and games.
+            </p>
+        </div>
+
+        <div className="grid md:grid-cols-3 gap-8 text-left">
+            <div className="space-y-2">
+                <div className="flex justify-center mb-4">
+                    <div className="bg-primary/10 text-primary p-4 rounded-full">
+                       <Layers className="h-8 w-8" />
+                    </div>
+                </div>
+                <h3 className="text-xl font-bold text-center">Copy & Paste Fonts</h3>
+                <p className="text-muted-foreground text-center">
+                    We are the #1 source for stylish fonts and text symbols for your social media bio. We can generate over 100 unique font styles using special characters and Unicode.
+                </p>
+            </div>
+            <div className="space-y-2">
+                 <div className="flex justify-center mb-4">
+                    <div className="bg-primary/10 text-primary p-4 rounded-full">
+                       <Settings className="h-8 w-8" />
+                    </div>
+                </div>
+                <h3 className="text-xl font-bold text-center">How It Works</h3>
+                <ol className="list-decimal list-inside text-muted-foreground space-y-1">
+                    <li>Type your text into the input box.</li>
+                    <li>We automatically generate stylish fonts.</li>
+                    <li>Copy the font you like.</li>
+                    <li>Paste it into your bio or name.</li>
+                </ol>
+            </div>
+            <div className="space-y-2">
+                 <div className="flex justify-center mb-4">
+                    <div className="bg-primary/10 text-primary p-4 rounded-full">
+                       <Sun className="h-8 w-8" />
+                    </div>
+                </div>
+                <h3 className="text-xl font-bold text-center">Free Stylish Fonts</h3>
+                <p className="text-muted-foreground text-center">
+                    Our generator can produce many font styles at once. Just enter your text and experience the magic of Unicode symbols. Discover a range of font styles like Fancy, Glitch, and Aesthetic on our website.
+                </p>
+            </div>
+        </div>
+      </div>
     </>
   );
 }
