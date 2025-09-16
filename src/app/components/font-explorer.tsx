@@ -49,13 +49,12 @@ function convertToFancy(text: string, style: (typeof fancyStyles)[0]): string {
   return text.split('').map(char => (mapping as Record<string, string>)[char] || char).join('');
 }
 
-const fontCategories = ["All", "Cool", "Cute", "Fancy", "Cursive", "Small", "Bold", "Hidden", "GLITCH", "STYLISH", "STRIKETHROUGH", "UPSIDE DOWN", "WEIRD", "UNDERLINE", "ITA"];
-
-
 export default function FontExplorer() {
   const [inputText, setInputText] = useState('Font Changer');
   const [selectedCategory, setSelectedCategory] = useState('All');
   const { toast } = useToast();
+
+  const fontCategories = useMemo(() => ["All", "Cool", "Cute", "Fancy", "Cursive", "Small", "Bold", "Hidden", "GLITCH", "STYLISH", "STRIKETHROUGH", "UPSIDE DOWN", "WEIRD", "UNDERLINE", "ITA"], []);
 
   const copyToClipboard = (text: string) => {
     navigator.clipboard.writeText(text);
