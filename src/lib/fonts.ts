@@ -47,7 +47,7 @@ export const fancyStyles = [
     { name: 'Alpha', mapping: { a: 'Λ', b: 'b', c: 'c', d: 'd', e: 'e', f: 'f', g: 'g', h: 'ḥ', i: 'i', j: 'j', k: 'k', l: 'l', m: 'm', n: 'n', o: 'o', p: 'p', q: 'q', r: 'r', s: 's', t: 't', u: 'u', v: 'v', w: 'w', x: 'x', y: 'y', z: 'z', A: 'Λ', B: 'B', C: 'C', D: 'D', E: 'E', F: 'F', G: 'G', H: 'Ḥ', I: 'I', J: 'J', K: 'K', L: 'L', M: 'M', N: 'N', O: 'O', P: 'P', Q: 'Q', R: 'R', S: 'S', T: 'T', U: 'U', V: 'V', W: 'W', X: 'X', Y: 'Y', Z: 'Z' }, categories: ['Weird', 'Symbolic'] },
     { name: 'Liner', isDecorator: true, perChar: true, prefix: '-', suffix: '', categories: ['Weird', 'Symbolic'] },
     { name: 'Echo', mapping: { a: 'a', b: 'b', c: 'ƈ', d: 'd', e: 'e', f: 'f', g: 'g', h: 'ԋ', i: 'i', j: 'j', k: 'k', l: 'l', m: 'm', n: 'n', o: 'σ', p: 'p', q: 'q', r: 'r', s: 's', t: 't', u: 'u', v: 'v', w: 'w', x: 'x', y: 'y', z: 'z', A: 'A', B: 'B', C: 'Ƈ', D: 'D', E: 'E', F: 'F', G: 'G', H: 'Ԋ', I: 'I', J: 'J', K: 'K', L: 'L', M: 'M', N: 'N', O: 'Σ', P: 'P', Q: 'Q', R: 'R', S: 'S', T: 'T', U: 'U', V: 'V', W: 'W', X: 'X', Y: 'Y', Z: 'Z' }, categories: ['Weird', 'Symbolic'] },
-    { name: 'Dot Joiner', isDecorator: true, perChar: true, prefix: '', suffix: '•', categories: ['Joiners'] },
+    { name: 'Dot Joiner', isDecorator: true, perChar: true, prefix: '', suffix: '.', categories: ['Joiners'] },
     { name: 'Shade', isDecorator: true, perChar: true, prefix: '', suffix: '▓', categories: ['Joiners'] },
     { name: 'Cross Above', isDecorator: true, perChar: true, prefix: '', suffix: '͓̽', categories: ['Joiners', 'Weird'] },
     { name: 'Corner', isDecorator: true, prefix: '⌜', suffix: '⌟', categories: ['Boxed', 'Joiners'] },
@@ -73,11 +73,12 @@ export const fancyStyles = [
     { name: 'Kawaii Face', isDecorator: true, prefix: '(｡♥‿♥｡) ', suffix: ' (｡♥‿♥｡)', categories: ['Cute'] },
     { name: 'Elegant', isDecorator: true, prefix: '⚜️', suffix: '⚜️', categories: ['Fancy', 'Symbolic'] },
     { name: 'Star Surround', isDecorator: true, prefix: '✧', suffix: '✧', categories: ['Fancy', 'Cute', 'Symbolic'] },
-    { name: 'Age Old', mapping: {a: 'ꭺ', b: 'ꮃ', c: 'ꮯ', d: 'ꭰ', e: 'ꭼ', f: 'ꝭ', g: 'ꮀ', h: 'ꭿ', i: 'ꭵ', j: 'ꭻ', k: 'ꮶ', l: 'ꮮ', m: 'ꮇ', n: 'ꮑ', o: 'ꭴ', p: 'ꮲ', q: 'A', r: 'ꭱ', s: 'ꮪ', t: 'ꭲ', u: 'ꭎ', v: 'ꮩ', w: 'ꮃ', x: 'ꮝ', y: 'ꭹ', z: 'ꮓ', A: 'ꭺ', B: 'ꮃ', C: 'ꮯ', D: 'ꭰ', E: 'ꭼ', F: 'ꝭ', G: 'ꮀ', H: 'ꭿ', I: 'ꭵ', J: 'ꭻ', K: 'ꮶ', L: 'ꮮ', M: 'ꮇ', N: 'ꮑ', O: 'ꭴ', P: 'ꮲ', Q: 'A', R: 'ꭱ', S: 'ꮪ', T: 'ꭲ', U: 'ꭎ', V: 'ꮩ', W: 'ꮃ', X: 'ꮝ', Y: 'ꭹ', Z: 'ꮓ' }, categories: ['Small'] }
+    { name: 'Age Old', mapping: {a: 'ꭺ', b: 'ꮃ', c: 'ꮯ', d: 'ꭰ', e: 'ꭼ', f: 'ꝭ', g: 'ꮀ', h: 'ꭿ', i: 'ꭵ', j: 'ꭻ', k: 'ꮶ', l: 'ꮮ', m: 'ꮇ', n: 'ꮑ', o: 'ꭴ', p: 'ꮲ', q: 'A', r: 'ꭱ', s: 'ꮪ', t: 'ꭲ', u: 'ꭎ', v: 'ꮩ', w: 'ꮃ', x: 'ꮝ', y: 'ꭹ', z: 'ꮓ', A: 'ꭺ', B: 'ꮃ', C: 'ꮯ', D: 'ꭰ', E: 'ꭼ', F: 'ꝭ', G: 'ꮀ', H: 'ꭿ', I: 'ꭵ', J: 'ꭻ', K: 'ꮶ', L: 'ꮮ', M: 'ꮇ', N: 'ꮑ', O: 'ꭴ', P: 'ꮲ', Q: 'A', R: 'ꭱ', S: 'ꮪ', T: 'ꭲ', U: 'ꭎ', V: 'ꮩ', W: 'ꮃ', X: 'ꮝ', Y: 'ꭹ', Z: '' }, categories: ['Small'] }
   ];
   
   export const fontCategories = ["All", "Popular", "Cool", "Cute", "Fancy", "Cursive", "Small", "Bold", "Boxed", "Joiners", "Lined", "Hidden", "GLITCH", "STYLISH", "STRIKETHROUGH", "UPSIDE DOWN", "Symbolic", "Weird", "UNDERLINE", "ITA"];
   
+
 
 
 
