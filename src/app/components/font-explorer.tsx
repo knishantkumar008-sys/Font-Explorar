@@ -8,7 +8,7 @@ import { Copy, Heart } from 'lucide-react';
 import { fancyStyles, fontCategories } from '@/lib/fonts';
 
 export default function FontExplorer() {
-  const [inputText, setInputText] = useState('Font Changer');
+  const [inputText, setInputText] = useState('Font Style');
   const [selectedCategory, setSelectedCategory] = useState('All');
   const { toast } = useToast();
 
