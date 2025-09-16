@@ -39,9 +39,6 @@ export default function RootLayout({
                 <Link href="/">Home</Link>
               </Button>
               <Button variant="ghost" asChild className="text-white hover:bg-white/10 hover:text-white">
-                <Link href="/">Font Changer</Link>
-              </Button>
-              <Button variant="ghost" asChild className="text-white hover:bg-white/10 hover:text-white">
                 <Link href="/symbols">Symbols</Link>
               </Button>
               <Button variant="ghost" asChild className="text-white hover:bg-white/10 hover:text-white">
