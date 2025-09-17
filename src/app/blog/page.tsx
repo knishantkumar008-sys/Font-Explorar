@@ -1,10 +1,8 @@
 "use client"
 
 import { useState, ChangeEvent } from 'react';
-import Link from 'next/link';
 import Image from 'next/image';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { blogPosts } from '@/lib/blog-posts';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
