@@ -1,7 +1,9 @@
+
 "use client"
 
 import { useState, ChangeEvent } from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
 import { blogPosts } from '@/lib/blog-posts';
@@ -15,8 +17,8 @@ export default function BlogPage() {
   };
 
   const filteredBlogPosts = blogPosts.filter((post) =>
-    post.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-    post.description.toLowerCase().includes(searchTerm.toLowerCase())
+    (post.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+    post.description.toLowerCase().includes(searchTerm.toLowerCase())) && post.content
   );
 
   const fontPosts = filteredBlogPosts.filter((post) => post.category === 'Font Blog');
@@ -52,24 +54,26 @@ export default function BlogPage() {
             {fontPosts.map((post) => {
               const image = getImage(post.imageId);
               return (
-                <Card key={post.id} className="flex flex-col overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-shadow">
-                  {image && (
-                    <Image
-                      src={image.imageUrl}
-                      alt={post.title}
-                      width={600}
-                      height={400}
-                      className="w-full h-48 object-cover"
-                      data-ai-hint={image.imageHint}
-                    />
-                  )}
-                  <CardHeader>
-                    <CardTitle className="font-bold">{post.title}</CardTitle>
-                  </CardHeader>
-                  <CardContent className="flex-grow">
-                    <p className="text-muted-foreground">{post.description}</p>
-                  </CardContent>
-                </Card>
+                <Link href={`/blog/${post.id}`} key={post.id} className="block">
+                  <Card className="flex flex-col overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-shadow h-full">
+                    {image && (
+                      <Image
+                        src={image.imageUrl}
+                        alt={post.title}
+                        width={600}
+                        height={400}
+                        className="w-full h-48 object-cover"
+                        data-ai-hint={image.imageHint}
+                      />
+                    )}
+                    <CardHeader>
+                      <CardTitle className="font-bold">{post.title}</CardTitle>
+                    </CardHeader>
+                    <CardContent className="flex-grow">
+                      <p className="text-muted-foreground">{post.description}</p>
+                    </CardContent>
+                  </Card>
+                </Link>
               );
             })}
           </div>
@@ -87,24 +91,26 @@ export default function BlogPage() {
             {trendingPosts.map((post) => {
               const image = getImage(post.imageId);
               return (
-                <Card key={post.id} className="flex flex-col overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-shadow">
-                  {image && (
-                    <Image
-                      src={image.imageUrl}
-                      alt={post.title}
-                      width={600}
-                      height={400}
-                      className="w-full h-48 object-cover"
-                      data-ai-hint={image.imageHint}
-                    />
-                  )}
-                  <CardHeader>
-                    <CardTitle className="font-bold">{post.title}</CardTitle>
-                  </CardHeader>
-                  <CardContent className="flex-grow">
-                    <p className="text-muted-foreground">{post.description}</p>
-                  </CardContent>
-                </Card>
+                 <Link href={`/blog/${post.id}`} key={post.id} className="block">
+                  <Card className="flex flex-col overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-shadow h-full">
+                    {image && (
+                      <Image
+                        src={image.imageUrl}
+                        alt={post.title}
+                        width={600}
+                        height={400}
+                        className="w-full h-48 object-cover"
+                        data-ai-hint={image.imageHint}
+                      />
+                    )}
+                    <CardHeader>
+                      <CardTitle className="font-bold">{post.title}</CardTitle>
+                    </CardHeader>
+                    <CardContent className="flex-grow">
+                      <p className="text-muted-foreground">{post.description}</p>
+                    </CardContent>
+                  </Card>
+                </Link>
               );
             })}
           </div>
@@ -117,3 +123,5 @@ export default function BlogPage() {
     </div>
   );
 }
+
+    
