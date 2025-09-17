@@ -4,6 +4,42 @@ import { placeholderImages } from '@/lib/image-data';
 import { notFound } from 'next/navigation';
 import Image from 'next/image';
 import { Card } from '@/components/ui/card';
+import type { Metadata, ResolvingMetadata } from 'next'
+
+type Props = {
+  params: { id: string }
+}
+
+export async function generateMetadata(
+  { params }: Props,
+  parent: ResolvingMetadata
+): Promise<Metadata> {
+  const post = blogPosts.find((p) => p.id === params.id);
+
+  if (!post) {
+    return {
+      title: 'Post Not Found',
+      description: 'The blog post you are looking for does not exist.',
+    }
+  }
+ 
+  return {
+    title: `${post.title} | Font Explorer`,
+    description: post.description,
+    openGraph: {
+      title: post.title,
+      description: post.description,
+      images: [
+        {
+          url: placeholderImages.find((img) => img.id === post.imageId)?.imageUrl || '',
+          width: 800,
+          height: 600,
+          alt: post.title,
+        },
+      ],
+    },
+  }
+}
 
 export default function BlogPostPage({ params }: { params: { id: string } }) {
   const post = blogPosts.find((p) => p.id === params.id);
