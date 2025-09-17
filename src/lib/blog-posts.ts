@@ -93,7 +93,7 @@ export const blogPosts: BlogPost[] = [
     content: `
 <p><b>Did you know you can easily change the font style in your WhatsApp messages?</b></p>
 <p>While WhatsApp has a few built-in tricks, you can take it to the next level by using our Font Explorer tool to make your chats way more interesting. Let's cover the basics first, and then we'll show you how to get really creative.</p>
-<h2>The Official WhatsApp Formatting Tricks</h2>
+<p><b>The Official WhatsApp Formatting Tricks</b></p>
 <p>WhatsApp has some simple formatting options you can use without any external tools.</p>
 <ol>
   <li><b>Bold Text:</b> Perfect for highlighting something important. Just put an asterisk (*) on both sides of the text. For example: *This is important* will become <b>This is important</b>.</li>
@@ -103,7 +103,7 @@ export const blogPosts: BlogPost[] = [
 </ol>
 <h2>Taking it to the Next Level with Font Explorer</h2>
 <p>The built-in options are cool, but what if you want something truly unique? That's what we're here for. With our tool, you can generate dozens of other styles and use them in WhatsApp. Imagine sending a message in <b>Cursive</b>, <b>Bubbles</b>, or even <b>Gothic</b> script!</p>
-<p>Here’s how you do it:</p>
+<p><b>Here’s how you do it:</b></p>
 <ol>
   <li>Type your message into the Font Explorer on our homepage.</li>
   <li>Browse through all the cool styles that appear.</li>
@@ -121,17 +121,17 @@ export const blogPosts: BlogPost[] = [
     imageId: 'blog-trends',
     content: `
 <p>On social media, the way your text looks is just as important as what it says. The right font can capture attention, set a mood, and help you build a consistent brand. We built Font Explorer to give you the tools to do just that. Here are the top 5 font styles from our collection that we see people using to create a killer social media presence.</p>
-<h2>1. Cursive & Script Fonts</h2>
+<p><b>1. Cursive & Script Fonts</b></p>
 <p>These fonts look like elegant handwriting. Check out <b>Cursive</b> and <b>Bold Cursive</b> in our tool. They feel personal, sophisticated, and artistic. They are perfect for lifestyle bloggers, artists, and anyone wanting to add a touch of class.</p>
-<h2>2. Gothic & Old English Fonts</h2>
+<p><b>2. Gothic & Old English Fonts</b></p>
 <p>These are dramatic, old-style fonts like <b>Gothic</b> and <b>Medieval</b>. They have a strong, impactful, and edgy feel. They're great for grabbing attention and are often used by gamers, music artists, and fashion brands.</p>
-<h2>3. Minimalist & Clean Fonts</h2>
+<p><b>3. Minimalist & Clean Fonts</b></p>
 <p>Clean, simple fonts. In our tool, look for styles like <b>Bold</b>, <b>Italic</b>, or even <b>Wide Text</b>. They are modern, easy to read, and convey professionalism. They're super versatile and work for almost any brand, from tech to wellness.</p>
-<h2>4. Bubble & Cute Fonts</h2>
+<p><b>4. Bubble & Cute Fonts</b></p>
 <p>These are rounded, soft, and playful fonts. Our <b>Bubbles</b> and <b>Dark Bubble</b> styles are very popular. These fonts are fun, friendly, and approachable. They're perfect for channels that are lighthearted and cheerful, like DIY creators or pet accounts.</p>
-<h2>5. Double-Struck & Outline Fonts</h2>
+<p><b>5. Double-Struck & Outline Fonts</b></p>
 <p>These fonts have a "hollow" or double-line effect. You can find it on our site as <b>Double Struck</b>. They are stylish without sacrificing too much readability. They feel modern and chic, and they stand out without being as overpowering as a heavy gothic font.</p>
-<h2>How to Use Them</h2>
+<p><b>How to Use Them</b></p>
 <p>It's easy! Just type your text into the Font Explorer tool on our homepage, copy your favorite style, and paste it into your social media profile or posts. By choosing the right font style, you can create a more powerful and memorable online presence.</p>
 `
   },
