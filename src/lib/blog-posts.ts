@@ -96,7 +96,8 @@ export const blogPosts: BlogPost[] = [
     category: 'Font Blog',
     imageId: 'blog-whatsapp',
     content: `
-<p>Did you know you can easily change the font style in your WhatsApp messages? While WhatsApp has a few built-in tricks, you can take it to the next level by using our Font Explorer tool to make your chats way more interesting. Let's cover the basics first, and then we'll show you how to get really creative.</p>
+<h3>Did you know you can easily change the font style in your WhatsApp messages?</h3>
+<p>While WhatsApp has a few built-in tricks, you can take it to the next level by using our Font Explorer tool to make your chats way more interesting. Let's cover the basics first, and then we'll show you how to get really creative.</p>
 
 <h3>The Official WhatsApp Formatting Tricks</h3>
 <p>WhatsApp has some simple formatting options you can use without any external tools.</p>
