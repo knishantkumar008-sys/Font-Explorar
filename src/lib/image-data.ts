@@ -42,5 +42,13 @@ export const placeholderImages: ImagePlaceholder[] = [
       "description": "A phone displaying a WhatsApp chat conversation",
       "imageUrl": "https://picsum.photos/seed/bp6/600/400",
       "imageHint": "chat message"
+    },
+    {
+      "id": "blog-explorer-guide",
+      "description": "A person exploring different creative font styles on a screen",
+      "imageUrl": "https://picsum.photos/seed/bp7/600/400",
+      "imageHint": "creative typography"
     }
   ]
+
+    
