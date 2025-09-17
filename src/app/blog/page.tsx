@@ -6,8 +6,8 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
-import { blogPosts } from '@/lib/blog-posts';
-import { PlaceHolderImages } from '@/lib/placeholder-images';
+import { blogPosts } from '@/lib/blog-data';
+import { PlaceHolderImages } from '@/lib/image-data';
 
 export default function BlogPage() {
   const [searchTerm, setSearchTerm] = useState('');
@@ -123,5 +123,3 @@ export default function BlogPage() {
     </div>
   );
 }
-
-    

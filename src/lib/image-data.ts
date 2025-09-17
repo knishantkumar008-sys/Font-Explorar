@@ -1,6 +1,12 @@
 
-{
-  "placeholderImages": [
+export type ImagePlaceholder = {
+  id: string;
+  description: string;
+  imageUrl: string;
+  imageHint: string;
+};
+
+export const placeholderImages: ImagePlaceholder[] = [
     {
       "id": "blog-psychology",
       "description": "Abstract representation of human psychology and fonts",
@@ -38,6 +44,3 @@
       "imageHint": "chat message"
     }
   ]
-}
-
-    

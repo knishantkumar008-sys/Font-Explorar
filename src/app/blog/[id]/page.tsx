@@ -1,6 +1,6 @@
 
-import { blogPosts } from '@/lib/blog-posts';
-import { PlaceHolderImages } from '@/lib/placeholder-images';
+import { blogPosts } from '@/lib/blog-data';
+import { PlaceHolderImages } from '@/lib/image-data';
 import { notFound } from 'next/navigation';
 import Image from 'next/image';
 import { Card } from '@/components/ui/card';
