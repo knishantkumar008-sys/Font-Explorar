@@ -64,7 +64,7 @@ export default function BlogPage() {
                     />
                   )}
                   <CardHeader>
-                    <CardTitle>{post.title}</CardTitle>
+                    <CardTitle className="font-bold">{post.title}</CardTitle>
                   </CardHeader>
                   <CardContent className="flex-grow">
                     <p className="text-muted-foreground">{post.description}</p>
@@ -99,7 +99,7 @@ export default function BlogPage() {
                     />
                   )}
                   <CardHeader>
-                    <CardTitle>{post.title}</CardTitle>
+                    <CardTitle className="font-bold">{post.title}</CardTitle>
                   </CardHeader>
                   <CardContent className="flex-grow">
                     <p className="text-muted-foreground">{post.description}</p>
