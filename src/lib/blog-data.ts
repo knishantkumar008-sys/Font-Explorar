@@ -243,12 +243,12 @@ export const blogPosts: BlogPost[] = [
   },
   {
     id: '4',
-    title: 'Top 5 Font Styles for a Killer Social Media Presence',
+    title: 'Top 5 Font Styles for an Impactful Social Media Presence',
     description: 'Discover the most popular and effective font styles from our collection that can help you build a strong brand online.',
     category: 'Font Blog',
     imageId: 'blog-trends',
     content: `
-<p>On social media, the way your text looks is just as important as what it says. The right font can capture attention, set a mood, and help you build a consistent brand. While content is king, style is the chariot it rides in on. A strong visual identity makes you memorable and helps you stand out in a sea of endless scrolling. We built Font Explorer to give you the tools to do just that. Here are the top 5 font styles from our collection that we see people using to create a killer social media presence.</p>
+<p>On social media, the way your text looks is just as important as what it says. The right font can capture attention, set a mood, and help you build a consistent brand. While content is king, style is the chariot it rides in on. A strong visual identity makes you memorable and helps you stand out in a sea of endless scrolling. We built Font Explorer to give you the tools to do just that. Here are the top 5 font styles from our collection that we see people using to create an impactful social media presence.</p>
 
 <p><b>1. Cursive & Script Fonts</b></p>
 <p><b>What they are:</b> These fonts mimic the fluid strokes of handwriting, ranging from elegant and formal to casual and playful. In our tool, you can find styles like <b>Cursive</b> and <b>Bold Cursive</b> that offer this sophisticated look.</p>
