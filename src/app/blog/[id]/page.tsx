@@ -27,7 +27,7 @@ export default function BlogPostPage({ params }: { params: { id: string } }) {
           />
         )}
         <h1 className="text-4xl font-bold tracking-tight text-foreground">{post.title}</h1>
-        <div className="text-muted-foreground whitespace-pre-wrap">{post.content}</div>
+        <div className="text-muted-foreground whitespace-pre-wrap leading-relaxed">{post.content}</div>
       </article>
     </div>
   );
@@ -39,5 +39,3 @@ export async function generateStaticParams() {
     id: post.id,
   }));
 }
-
-    
