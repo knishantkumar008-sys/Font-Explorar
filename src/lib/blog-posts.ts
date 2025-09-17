@@ -94,14 +94,13 @@ export const blogPosts: BlogPost[] = [
 <p><b>Did you know you can easily change the font style in your WhatsApp messages?</b></p>
 <p>While WhatsApp has a few built-in tricks, you can take it to the next level by using our Font Explorer tool to make your chats way more interesting. Let's cover the basics first, and then we'll show you how to get really creative.</p>
 <p><b>The Official WhatsApp Formatting Tricks</b></p>
-<p>WhatsApp has some simple formatting options you can use without any external tools.</p>
 <ol>
   <li><b>Bold Text:</b> Perfect for highlighting something important. Just put an asterisk (*) on both sides of the text. For example: *This is important* will become <b>This is important</b>.</li>
   <li><b>Italic Text:</b> Great for adding a bit of emphasis or showing a quote. Put an underscore (_) on both sides. For example: _I think he said this_ will become <i>I think he said this</i>.</li>
   <li><b>Strikethrough Text:</b> Used to show something is a mistake or just for fun. Put a tilde (~) on both sides. For example: ~My old plan~ will become <del>My old plan</del>.</li>
   <li><b>Monospace Font:</b> This gives your text a cool, typewriter-like feel. Put three backticks (\`\`\`) on both sides. For example: \`\`\`This is monospace text\`\`\` will look like <code>This is monospace text</code>.</li>
 </ol>
-<h2>Taking it to the Next Level with Font Explorer</h2>
+<p><b>Here’s how you do it:</b></p>
 <p>The built-in options are cool, but what if you want something truly unique? That's what we're here for. With our tool, you can generate dozens of other styles and use them in WhatsApp. Imagine sending a message in <b>Cursive</b>, <b>Bubbles</b>, or even <b>Gothic</b> script!</p>
 <p><b>Here’s how you do it:</b></p>
 <ol>
