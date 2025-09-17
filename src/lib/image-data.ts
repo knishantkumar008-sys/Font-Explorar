@@ -33,9 +33,9 @@ export const placeholderImages: ImagePlaceholder[] = [
     },
     {
       "id": "blog-branding",
-      "description": "Visuals representing brand identity and logos",
+      "description": "Visuals representing brand identity, perhaps with a target to symbolize audience targeting.",
       "imageUrl": "https://picsum.photos/seed/bp5/600/400",
-      "imageHint": "brand identity"
+      "imageHint": "brand target"
     },
     {
       "id": "blog-whatsapp",
