@@ -27,7 +27,10 @@ export default function BlogPostPage({ params }: { params: { id: string } }) {
           />
         )}
         <h1 className="text-4xl font-bold tracking-tight text-foreground">{post.title}</h1>
-        <div className="text-muted-foreground whitespace-pre-wrap leading-relaxed">{post.content}</div>
+        <div 
+            className="text-muted-foreground whitespace-pre-wrap leading-relaxed"
+            dangerouslySetInnerHTML={{ __html: post.content.replace(/\n/g, '<br />') }}
+        />
       </article>
     </div>
   );
@@ -39,3 +42,5 @@ export async function generateStaticParams() {
     id: post.id,
   }));
 }
+
+    

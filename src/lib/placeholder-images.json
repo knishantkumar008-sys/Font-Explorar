@@ -5,23 +5,23 @@
       "id": "blog-psychology",
       "description": "Abstract representation of human psychology and fonts",
       "imageUrl": "https://picsum.photos/seed/bp1/600/400",
-      "imageHint": "abstract psychology"
+      "imageHint": "font psychology"
     },
     {
       "id": "blog-pairing",
-      "description": "Creative combination of different font styles",
+      "description": "Creative combination of different font styles for a stylish name",
       "imageUrl": "https://picsum.photos/seed/bp2/600/400",
-      "imageHint": "font design"
+      "imageHint": "gaming profile"
     },
     {
       "id": "blog-social-media",
-      "description": "Illustration of social media icons and text",
+      "description": "Illustration of social media profile on a phone",
       "imageUrl": "https://picsum.photos/seed/bp3/600/400",
-      "imageHint": "social media"
+      "imageHint": "social media profile"
     },
     {
       "id": "blog-trends",
-      "description": "Futuristic design illustrating new trends",
+      "description": "A stylish flat lay of design tools and a phone showing social media",
       "imageUrl": "https://picsum.photos/seed/bp4/600/400",
       "imageHint": "design trends"
     },
@@ -30,6 +30,14 @@
       "description": "Visuals representing brand identity and logos",
       "imageUrl": "https://picsum.photos/seed/bp5/600/400",
       "imageHint": "brand identity"
+    },
+    {
+      "id": "blog-whatsapp",
+      "description": "A phone displaying a WhatsApp chat conversation",
+      "imageUrl": "https://picsum.photos/seed/bp6/600/400",
+      "imageHint": "chat message"
     }
   ]
 }
+
+    
