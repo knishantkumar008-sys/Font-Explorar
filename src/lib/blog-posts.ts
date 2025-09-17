@@ -154,5 +154,5 @@ export const blogPosts: BlogPost[] = [
     category: 'Trending News',
     imageId: 'blog-branding',
     content: ''
-  },
+  }
 ];
