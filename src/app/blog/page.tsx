@@ -7,7 +7,7 @@ import Link from 'next/link';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
 import { blogPosts } from '@/lib/blog-data';
-import { PlaceHolderImages } from '@/lib/image-data';
+import { placeholderImages } from '@/lib/image-data';
 
 export default function BlogPage() {
   const [searchTerm, setSearchTerm] = useState('');
@@ -25,7 +25,7 @@ export default function BlogPage() {
   const trendingPosts = filteredBlogPosts.filter((post) => post.category === 'Trending News');
 
   const getImage = (id: string) => {
-    return PlaceHolderImages.find((img) => img.id === id);
+    return placeholderImages.find((img) => img.id === id);
   };
 
   return (

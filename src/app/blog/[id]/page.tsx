@@ -1,6 +1,6 @@
 
 import { blogPosts } from '@/lib/blog-data';
-import { PlaceHolderImages } from '@/lib/image-data';
+import { placeholderImages } from '@/lib/image-data';
 import { notFound } from 'next/navigation';
 import Image from 'next/image';
 import { Card } from '@/components/ui/card';
@@ -12,7 +12,7 @@ export default function BlogPostPage({ params }: { params: { id: string } }) {
     notFound();
   }
 
-  const image = PlaceHolderImages.find((img) => img.id === post.imageId);
+  const image = placeholderImages.find((img) => img.id === post.imageId);
 
   return (
     <div className="p-4 md:p-6 space-y-8">
