@@ -71,11 +71,6 @@ export default function BlogPage() {
                   <CardContent className="flex-grow">
                     <p className="text-muted-foreground">{post.description}</p>
                   </CardContent>
-                  <div className="p-6 pt-0">
-                    <Button asChild>
-                      <Link href="#">Read More</Link>
-                    </Button>
-                  </div>
                 </Card>
               );
             })}
@@ -111,11 +106,6 @@ export default function BlogPage() {
                   <CardContent className="flex-grow">
                     <p className="text-muted-foreground">{post.description}</p>
                   </CardContent>
-                  <div className="p-6 pt-0">
-                     <Button asChild>
-                      <Link href="#">Read More</Link>
-                    </Button>
-                  </div>
                 </Card>
               );
             })}
