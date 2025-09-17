@@ -12,7 +12,7 @@ export default function PrivacyPage() {
       <Card>
         <CardHeader><CardTitle>Introduction</CardTitle></CardHeader>
         <CardContent className="space-y-4 text-card-foreground">
-          <p>Welcome to Fancy Text Generator ("we," "our," or "us"). We are committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website. Please read this privacy policy carefully. If you do not agree with the terms of this privacy policy, please do not access the site.</p>
+          <p>Welcome to Font Explorer ("we," "our," or "us"). We are committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website. Please read this privacy policy carefully. If you do not agree with the terms of this privacy policy, please do not access the site.</p>
         </CardContent>
       </Card>
       
@@ -56,7 +56,7 @@ export default function PrivacyPage() {
       </Card>
 
       <Card>
-        <CardHeader><CardTitle>Contact Us</CardTitle></CardHeader>
+        <CardHeader><CardTitle>Contact Us</CardTitle></Header>
         <CardContent className="space-y-4 text-card-foreground">
           <p>If you have questions or comments about this Privacy Policy, please contact us through our contact page.</p>
         </CardContent>

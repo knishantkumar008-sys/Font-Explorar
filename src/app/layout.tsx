@@ -11,8 +11,8 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: 'Fancy Text Generator',
-  description: 'Generate fancy text styles for your social media posts.',
+  title: 'Font Explorer - Fancy Text & Style Generator',
+  description: 'Explore, generate, and copy-paste stylish and fancy text for your social media profiles and posts.',
 };
 
 export default function RootLayout({
@@ -27,7 +27,7 @@ export default function RootLayout({
           <header className="flex h-20 items-center px-4 md:px-6">
             <Link href="/" className="flex items-center gap-2 mr-auto">
                 <span className="text-xl font-semibold tracking-tight text-white">
-                  Fancy Text Generator
+                  Font Explorer
                 </span>
             </Link>
             <nav className="flex items-center space-x-2">
@@ -53,7 +53,7 @@ export default function RootLayout({
           <footer className="mt-auto">
             <div className="container mx-auto flex flex-col md:flex-row items-center justify-between py-4 px-4 md:px-6 text-sm text-white">
               <p className="text-center md:text-left mb-2 md:mb-0">
-                &copy; {new Date().getFullYear()} Fancy Text Generator. All rights reserved.
+                &copy; {new Date().getFullYear()} Font Explorer. All rights reserved.
               </p>
               <div className="flex items-center space-x-4">
                 <Link href="/about" className="hover:underline">About</Link>
