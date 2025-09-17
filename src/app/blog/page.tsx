@@ -22,7 +22,7 @@ export default function BlogPage() {
   );
 
   const fontPosts = filteredBlogPosts.filter((post) => post.category === 'Font Blog');
-  const trendingPosts = filteredBlogPosts.filter((post) => post.category === 'Trending News');
+  const trendingPosts = filteredBlogPosts.filter((post) => post.category === 'Trending');
 
   const getImage = (id: string) => {
     return placeholderImages.find((img) => img.id === id);
@@ -85,7 +85,7 @@ export default function BlogPage() {
       </div>
 
       <div>
-        <h2 className="text-3xl font-bold mb-6">Trending News</h2>
+        <h2 className="text-3xl font-bold mb-6">Trending</h2>
         {trendingPosts.length > 0 ? (
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
             {trendingPosts.map((post) => {

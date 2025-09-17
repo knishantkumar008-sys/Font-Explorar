@@ -3,13 +3,13 @@ export type BlogPost = {
   id: string;
   title: string;
   description: string;
-  category: 'Font Blog' | 'Trending News';
+  category: 'Font Blog' | 'Trending';
   imageId: string;
   content: string;
 };
 
 export const blogPosts: BlogPost[] = [
-  {
+    {
     id: '6',
     title: 'Your Complete Guide to Font Explorer: Transform Your Text in Seconds',
     description: 'Learn everything about Font Explorer, from how it works to the latest trending fonts, and discover all the creative ways you can use fancy text online.',
@@ -84,7 +84,7 @@ export const blogPosts: BlogPost[] = [
     category: 'Font Blog',
     imageId: 'blog-social-media',
     content: `
-<p>In the crowded, fast-scrolling world of Instagram, your bio is your digital handshake. It’s often the first and sometimes only chance you get to make a memorable impression. With millions of profiles out there, how do you ensure yours doesn’t just blend into the background? The answer lies in creativity, and a surprisingly powerful tool for that is your choice of fonts. While Instagram offers a single, standard font, stepping outside that box can instantly elevate your profile from generic to "Wow, who is this?" A unique font tells a story before anyone even reads your words. It sets a mood, defines a brand, and captures attention. That's precisely why we created Font Explorer to give you an easy, copy-and-paste solution to transform your bio into a powerful statement piece.</p>
+<p>In the crowded, fast-scrolling world of Instagram, your bio is your digital handshake. It’s often the first and sometimes only chance you get to make a memorable impression. With millions of profiles out there, how do you ensure yours doesn’t just blend into the background? The answer lies in creativity, and a surprisingly powerful tool for that is your choice of fonts. While Instagram offers a single, standard font, stepping outside that box can instantly elevate your profile from generic to "Wow, who is this?" A unique font tells a story before anyone even reads your words. It sets a mood, defines a brand, and captures attention. That's precisely why we created Font Explorer, to give you an easy, copy-and-paste solution to transform your bio into a powerful statement piece.</p>
 
 <b>Why Use Custom Fonts in Your Instagram Bio?</b>
 <p>
@@ -293,7 +293,7 @@ export const blogPosts: BlogPost[] = [
     id: '5',
     title: 'Creating a Strong Visual Identity for Your Brand',
     description: 'Learn how to use fonts, colors, and symbols to build a memorable and consistent brand identity online.',
-    category: 'Trending News',
+    category: 'Trending',
     imageId: 'blog-branding',
     content: `
 <p>In today's crowded digital marketplace, your brand's visual identity is more important than ever. It's not just about having a pretty logo; it’s the silent ambassador for your business. A strong, consistent visual identity is what makes you instantly recognizable, builds trust with your audience, and powerfully sets you apart from the competition. It’s the visual language you use to communicate your values, personality, and promise at every single touchpoint. This comprehensive guide will explore the key pillars of a powerful visual identity: typography, color, and symbols, and how you can strategically use tools like Font Explorer to bring them all together into a cohesive and memorable brand experience.</p>
