@@ -18,7 +18,8 @@ export const blogPosts: BlogPost[] = [
     content: `
 <p>In the crowded world of Instagram, making a strong first impression is everything. Your bio is one of the first things people see, and let's be honest, the default font is a bit boring. A unique, eye-catching bio can be the difference between gaining a new follower and being scrolled past. That's where our Font Explorer tool comes in. We built it to help you easily find and use custom fonts for your Instagram bio.</p>
 
-<h3>Why Use Custom Fonts in Your Instagram Bio?</h3>
+<p><b>Why Use Custom Fonts in Your Instagram Bio?</b></p>
+
 <p>
   <b>Stand Out:</b> Most people stick with the default font. By using a unique style like <b>Cursive</b> or <b>Gothic</b> from our collection, you immediately grab attention. Your profile becomes more memorable.
 </p>
@@ -29,9 +30,9 @@ export const blogPosts: BlogPost[] = [
   <b>Create a Visual Hierarchy:</b> You can use different fonts to guide the eye. For example, use a fancy font for your name or title, and a cleaner (but still cool) one like <b>Monospace</b> for your contact information.
 </p>
 
-<h3>How We Made It Easy for You</h3>
+<h2>How We Made It Easy for You</h2>
 <p>You can't change fonts directly within the Instagram app. But with our Font Explorer, it's a simple copy-and-paste job:</p>
-<ol class="list-decimal list-inside space-y-2">
+<ol>
   <li><b>Type Your Text:</b> Go to our homepage and type your bio text into the generator box.</li>
   <li><b>Explore the Styles:</b> The tool will instantly show you your text in all the different styles we offer.</li>
   <li><b>Copy and Paste:</b> See a font you love? Just click the copy button next to it.</li>
@@ -60,18 +61,18 @@ export const blogPosts: BlogPost[] = [
     content: `
 <h3>Why is a Stylish Name So Important?</h3>
 <p>A stylish name is your digital identity. Whether you're on Instagram, playing BGMI, or on any other platform, a unique name helps you stand out. We created Font Explorer specifically for this – to help you build a cool online persona.</p>
-<ul class="list-disc list-inside space-y-2">
+<ul>
   <li><b>Be Memorable:</b> A unique name is easier for friends and other players to remember. Who wants to be "Player123"?</li>
   <li><b>Build Your Brand:</b> If you're a content creator, a stylish name is a key part of your brand. It's your signature.</li>
   <li><b>Express Yourself:</b> It's a fun way to show off your creativity. You can use our tool to add symbols and different font styles to create a name that's 100% you.</li>
 </ul>
 
-<h3>How to Create Your Stylish Name with Our Tool</h3>
+<h2>How to Create Your Stylish Name with Our Tool</h2>
 <p>It's simple! Just follow these steps:</p>
-<ol class="list-decimal list-inside space-y-2">
+<ol>
   <li><b>Enter Your Name:</b> Just type your desired name or nickname into the input box on our homepage.</li>
   <li><b>Explore the Styles:</b> Our generator will instantly convert your name into hundreds of fancy styles. We've got:
-    <ul class="list-disc list-inside space-y-1 pl-4 mt-2">
+    <ul>
       <li><b>Gothic & Old English:</b> For a classic, hardcore look.</li>
       <li><b>Cursive & Script:</b> For an elegant style.</li>
       <li><b>Bubbles & Inverted Squares:</b> For a friendly or bold vibe.</li>
@@ -99,19 +100,19 @@ export const blogPosts: BlogPost[] = [
 <h3>Did you know you can easily change the font style in your WhatsApp messages?</h3>
 <p>While WhatsApp has a few built-in tricks, you can take it to the next level by using our Font Explorer tool to make your chats way more interesting. Let's cover the basics first, and then we'll show you how to get really creative.</p>
 
-<h3>The Official WhatsApp Formatting Tricks</h3>
+<h2>The Official WhatsApp Formatting Tricks</h2>
 <p>WhatsApp has some simple formatting options you can use without any external tools.</p>
-<ol class="list-decimal list-inside space-y-2">
+<ol>
   <li><b>Bold Text:</b> Perfect for highlighting something important. Just put an asterisk (*) on both sides of the text. For example: *This is important* will become <b>This is important</b>.</li>
   <li><b>Italic Text:</b> Great for adding a bit of emphasis or showing a quote. Put an underscore (_) on both sides. For example: _I think he said this_ will become <i>I think he said this</i>.</li>
   <li><b>Strikethrough Text:</b> Used to show something is a mistake or just for fun. Put a tilde (~) on both sides. For example: ~My old plan~ will become <del>My old plan</del>.</li>
   <li><b>Monospace Font:</b> This gives your text a cool, typewriter-like feel. Put three backticks (\`\`\`) on both sides. For example: \`\`\`This is monospace text\`\`\` will look like <code>This is monospace text</code>.</li>
 </ol>
 
-<h3>Taking it to the Next Level with Font Explorer</h3>
+<h2>Taking it to the Next Level with Font Explorer</h2>
 <p>The built-in options are cool, but what if you want something truly unique? That's what we're here for. With our tool, you can generate dozens of other styles and use them in WhatsApp. Imagine sending a message in <b>Cursive</b>, <b>Bubbles</b>, or even <b>Gothic</b> script!</p>
 <p>Here’s how you do it:</p>
-<ol class="list-decimal list-inside space-y-2">
+<ol>
   <li>Type your message into the Font Explorer on our homepage.</li>
   <li>Browse through all the cool styles that appear.</li>
   <li>Find one you like and click the copy button.</li>
