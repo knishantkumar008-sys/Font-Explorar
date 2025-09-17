@@ -16,8 +16,8 @@ export const blogPosts: BlogPost[] = [
     category: 'Font Blog',
     imageId: 'blog-social-media',
     content: `
-<p>In the crowded, fast-scrolling world of Instagram, your bio is your digital handshake. It’s often the first—and sometimes only—chance you get to make a memorable impression. With millions of profiles out there, how do you ensure yours doesn’t just blend into the background? The answer lies in creativity, and a surprisingly powerful tool for that is your choice of fonts.</p>
-<p>While Instagram offers a single, standard font, stepping outside that box can instantly elevate your profile from generic to "Wow, who is this?" A unique font tells a story before anyone even reads your words. It sets a mood, defines a brand, and captures attention. That's precisely why we created Font Explorer—to give you an easy, copy-and-paste solution to transform your bio into a powerful statement piece.</p>
+<p>In the crowded, fast-scrolling world of Instagram, your bio is your digital handshake. It’s often the first and sometimes only chance you get to make a memorable impression. With millions of profiles out there, how do you ensure yours doesn’t just blend into the background? The answer lies in creativity, and a surprisingly powerful tool for that is your choice of fonts.</p>
+<p>While Instagram offers a single, standard font, stepping outside that box can instantly elevate your profile from generic to "Wow, who is this?" A unique font tells a story before anyone even reads your words. It sets a mood, defines a brand, and captures attention. That's precisely why we created Font Explorer to give you an easy, copy-and-paste solution to transform your bio into a powerful statement piece.</p>
 
 <p><b>Why Use Custom Fonts in Your Instagram Bio?</b></p>
 <p>
@@ -84,10 +84,10 @@ export const blogPosts: BlogPost[] = [
 <p><b>Why is a Stylish Name So Important?</b></p>
 <p>Your online name is more than just a label; it’s a crucial part of your digital identity. Here’s a deeper look at why it matters so much:</p>
 <ul>
-  <li><b>It Makes You Memorable:</b> In a sea of millions of users, a unique name helps you stick in people's minds. Think about your favorite gamers or influencers—chances are, they have a distinctive name. A stylish name like 𝕯𝖆𝖗𝖐 𝕬𝖓𝖌𝖊𝖑 or ♡ßutterfly♡ is far more memorable than "Tom1998."</li>
+  <li><b>It Makes You Memorable:</b> In a sea of millions of users, a unique name helps you stick in people's minds. Think about your favorite gamers or influencers, chances are, they have a distinctive name. A stylish name like 𝕯𝖆𝖗𝖐 𝕬𝖓𝖌𝖊𝖑 or ♡ßutterfly♡ is far more memorable than "Tom1998."</li>
   <li><b>It Builds Your Personal Brand:</b> If you're a streamer, content creator, or aspiring influencer, your name is the foundation of your brand. It should align with the content you create and the image you want to project. A cool, gothic font might be perfect for a rock musician, while a cute, bubbly font would suit a DIY craft channel.</li>
   <li><b>It Expresses Your Personality:</b> Your name is a blank canvas. It's a fun and immediate way to showcase your creativity and personality before you even post a single picture or video. Are you mysterious? Try our <b>Zalgo (Glitch)</b> font. Are you elegant? Go for a <b>Cursive</b> style. It’s your chance to be 100% you.</li>
-  <li><b>It Can Boost Your Confidence:</b> Having a name that you feel good about can make you feel more confident in your online interactions. It’s like wearing your favorite outfit—it just feels right and helps you put your best foot forward.</li>
+  <li><b>It Can Boost Your Confidence:</b> Having a name that you feel good about can make you feel more confident in your online interactions. It’s like wearing your favorite outfit, it just feels right and helps you put your best foot forward.</li>
 </ul>
 
 <p><b>How to Create Your Stylish Name with Our Tool</b></p>
