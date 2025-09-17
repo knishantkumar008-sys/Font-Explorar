@@ -46,8 +46,8 @@ export const placeholderImages: ImagePlaceholder[] = [
     {
       "id": "blog-explorer-guide",
       "description": "A person exploring different creative font styles on a screen",
-      "imageUrl": "https://picsum.photos/seed/bp7/600/400",
-      "imageHint": "creative typography"
+      "imageUrl": "https://picsum.photos/seed/guide1/600/400",
+      "imageHint": "typography design"
     }
   ]
 
