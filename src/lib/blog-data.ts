@@ -272,7 +272,7 @@ export const blogPosts: BlogPost[] = [
 
 <p><b>5. Double-Struck & Outline Fonts</b></p>
 <p><b>What they are:</b> These fonts have a "hollow" or double-line effect, giving them a unique and modern look. You can find this style on our site as <b>Double Struck</b>.</p>
-<p><b>What they communicate:</b> Style, chicness, and creativity. They are a great middle-ground, they stand out without being as overpowering as a heavy gothic font, and they feel more modern than a traditional cursive script.</p>
+<p><b>What they communicate:</b> Style, chicness, and creativity. They are a great middle ground, they stand out without being as overpowering as a heavy gothic font, and they feel more modern than a traditional cursive script.</p>
 <p><b>Who should use them:</b> This style is very popular among aesthetic-focused accounts, fashion bloggers, digital artists, and anyone looking to create a modern, trendy, and stylish brand. They add a touch of sophistication while still feeling fresh and unique.</p>
 
 <p><b>How to Use Them</b></p>
@@ -336,6 +336,8 @@ export const blogPosts: BlogPost[] = [
 `
   }
 ]
+
+    
 
     
 
