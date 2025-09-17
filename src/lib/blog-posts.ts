@@ -40,7 +40,7 @@ In the crowded world of Instagram, making a strong first impression is everythin
   <li><b>Update Your Bio:</b> Open Instagram, go to "Edit Profile," and paste the text into your bio field. That's it!</li>
 </ol>
 
-<h3>A Few Tips From Us</h3>
+<h2>A Few Tips From Us</h2>
 <p>
     <b>Readability is Key:</b> Some of our "Weird" fonts are super creative but might be hard to read. Make sure your bio is still understandable.
 </p>
