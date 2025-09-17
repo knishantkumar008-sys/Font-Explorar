@@ -27,7 +27,7 @@ export const blogPosts: BlogPost[] = [
 <p>
   <b>Create a Visual Hierarchy:</b> You can use different fonts to guide the eye. For example, use a fancy font for your name or title, and a cleaner (but still cool) one like <b>Monospace</b> for your contact information.
 </p>
-<h2>How We Made It Easy for You</h2>
+<p><b>How We Made It Easy for You</b></p>
 <p>You can't change fonts directly within the Instagram app. But with our Font Explorer, it's a simple copy-and-paste job:</p>
 <ol>
   <li><b>Type Your Text:</b> Go to our homepage and type your bio text into the generator box.</li>
@@ -62,7 +62,7 @@ export const blogPosts: BlogPost[] = [
   <li><b>Build Your Brand:</b> If you're a content creator, a stylish name is a key part of your brand. It's your signature.</li>
   <li><b>Express Yourself:</b> It's a fun way to show off your creativity. You can use our tool to add symbols and different font styles to create a name that's 100% you.</li>
 </ul>
-<h2>How to Create Your Stylish Name with Our Tool</h2>
+<p><b>How to Create Your Stylish Name with Our Tool</b></p>
 <p>It's simple! Just follow these steps:</p>
 <ol>
   <li><b>Enter Your Name:</b> Just type your desired name or nickname into the input box on our homepage.</li>
@@ -107,7 +107,7 @@ export const blogPosts: BlogPost[] = [
 <ol>
   <li>Type your message into the Font Explorer on our homepage.</li>
   <li>Browse through all the cool styles that appear.</li>
-  <li>Find one you like and click the copy button.</li>
+<li>Find one you like and click the copy button.</li>
   <li>Paste it directly into your WhatsApp chat and hit send!</li>
 </ol>
 <p>Because we use standard Unicode characters, these fancy styles will show up correctly on most modern smartphones. It's a simple way to make your chats more fun, expressive, and unique. Give it a try!</p>
@@ -121,15 +121,15 @@ export const blogPosts: BlogPost[] = [
     imageId: 'blog-trends',
     content: `
 <p>On social media, the way your text looks is just as important as what it says. The right font can capture attention, set a mood, and help you build a consistent brand. We built Font Explorer to give you the tools to do just that. Here are the top 5 font styles from our collection that we see people using to create a killer social media presence.</p>
-<h3>1. Cursive & Script Fonts</h3>
+<h2>1. Cursive & Script Fonts</h2>
 <p>These fonts look like elegant handwriting. Check out <b>Cursive</b> and <b>Bold Cursive</b> in our tool. They feel personal, sophisticated, and artistic. They are perfect for lifestyle bloggers, artists, and anyone wanting to add a touch of class.</p>
-<h3>2. Gothic & Old English Fonts</h3>
+<h2>2. Gothic & Old English Fonts</h2>
 <p>These are dramatic, old-style fonts like <b>Gothic</b> and <b>Medieval</b>. They have a strong, impactful, and edgy feel. They're great for grabbing attention and are often used by gamers, music artists, and fashion brands.</p>
-<h3>3. Minimalist & Clean Fonts</h3>
+<h2>3. Minimalist & Clean Fonts</h2>
 <p>Clean, simple fonts. In our tool, look for styles like <b>Bold</b>, <b>Italic</b>, or even <b>Wide Text</b>. They are modern, easy to read, and convey professionalism. They're super versatile and work for almost any brand, from tech to wellness.</p>
-<h3>4. Bubble & Cute Fonts</h3>
+<h2>4. Bubble & Cute Fonts</h2>
 <p>These are rounded, soft, and playful fonts. Our <b>Bubbles</b> and <b>Dark Bubble</b> styles are very popular. These fonts are fun, friendly, and approachable. They're perfect for channels that are lighthearted and cheerful, like DIY creators or pet accounts.</p>
-<h3>5. Double-Struck & Outline Fonts</h3>
+<h2>5. Double-Struck & Outline Fonts</h2>
 <p>These fonts have a "hollow" or double-line effect. You can find it on our site as <b>Double Struck</b>. They are stylish without sacrificing too much readability. They feel modern and chic, and they stand out without being as overpowering as a heavy gothic font.</p>
 <h2>How to Use Them</h2>
 <p>It's easy! Just type your text into the Font Explorer tool on our homepage, copy your favorite style, and paste it into your social media profile or posts. By choosing the right font style, you can create a more powerful and memorable online presence.</p>
