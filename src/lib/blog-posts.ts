@@ -91,7 +91,7 @@ A stylish name is your digital identity. Whether you're on Instagram, playing BG
   <li><b>Copy and Paste:</b> Once you've created the perfect name, click the copy button. Then, go to your Instagram profile settings or BGMI name change option and paste it in.</li>
 </ol>
 
-<h3>A Few Pro Tips</h3>
+<h2>A Few Pro Tips</h2>
 <p>
   <b>Check Compatibility:</b> Before you finalize your name, make sure the platform you're using (like a specific game) supports all the special characters.
 </p>
@@ -111,7 +111,7 @@ A stylish name is your digital identity. Whether you're on Instagram, playing BG
     category: 'Font Blog',
     imageId: 'blog-whatsapp',
     content: `
-Did you know you can easily change the font style in your WhatsApp messages? While WhatsApp has a few built-in tricks, you can take it to the next level by using our Font Explorer tool to make your chats way more interesting. Let's cover the basics first, and then I'll show you how to get really creative.
+Did you know you can easily change the font style in your WhatsApp messages? While WhatsApp has a few built-in tricks, you can take it to the next level by using our Font Explorer tool to make your chats way more interesting. Let's cover the basics first, and then we'll show you how to get really creative.
 
 <h3>The Official WhatsApp Formatting Tricks</h3>
 <p>
@@ -170,7 +170,7 @@ On social media, the way your text looks is just as important as what it says. T
   These fonts have a "hollow" or double-line effect. You can find it on our site as <b>Double Struck</b>. They are stylish without sacrificing too much readability. They feel modern and chic, and they stand out without being as overpowering as a heavy gothic font.
 </p>
 
-<h3>How to Use Them</h3>
+<h2>How to Use Them</h2>
 <p>
   It's easy! Just type your text into the Font Explorer tool on our homepage, copy your favorite style, and paste it into your social media profile or posts. By choosing the right font style, you can create a more powerful and memorable online presence.
 </p>
@@ -185,3 +185,5 @@ On social media, the way your text looks is just as important as what it says. T
     content: ''
   },
 ];
+
+    
