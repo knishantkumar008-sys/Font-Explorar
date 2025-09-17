@@ -35,7 +35,7 @@ export const blogPosts: BlogPost[] = [
   <li><b>Copy and Paste:</b> See a font you love? Just click the copy button next to it.</li>
   <li><b>Update Your Bio:</b> Open Instagram, go to "Edit Profile," and paste the text into your bio field. That's it!</li>
 </ol>
-<h2>A Few Tips From Us</h2>
+<p><b>A Few Tips From Us</b></p>
 <p>
     <b>Readability is Key:</b> Some of our "Weird" fonts are super creative but might be hard to read. Make sure your bio is still understandable.
 </p>
@@ -77,7 +77,7 @@ export const blogPosts: BlogPost[] = [
   <li><b>Add Symbols:</b> Don't forget to check out our "Symbols" page! You can copy symbols like stars (★), crosses (✞), or hearts (♥) and add them to your name for an extra touch. For example: 𝔑𝔦𝔫𝔧𝔞★</li>
   <li><b>Copy and Paste:</b> Once you've created the perfect name, click the copy button. Then, go to your Instagram profile settings or BGMI name change option and paste it in.</li>
 </ol>
-<h2>A Few Pro Tips</h2>
+<p><b>A Few Pro Tips</b></p>
 <p><b>Check Compatibility:</b> Before you finalize your name, make sure the platform you're using (like a specific game) supports all the special characters.</p>
 <p><b>Keep it Readable:</b> A name that's too complex might be hard for others to read or search for. Our <b>Wide Text</b> or <b>Bold</b> styles are cool but still very readable.</p>
 <p><b>Be Unique:</b> Try to mix and match styles and symbols from our site to create something that's truly your own.</p>
