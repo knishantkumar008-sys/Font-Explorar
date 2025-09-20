@@ -104,6 +104,7 @@ export default function TextArtPage() {
                 placeholder="e.g., a cute cat"
                 value={prompt}
                 onChange={(e) => setPrompt(e.target.value)}
+                rows={2}
               />
               <Button onClick={handleGenerate} disabled={loading || dailyLimit >= 12}>
                 {loading && <Loader className="mr-2 h-4 w-4 animate-spin" />}
