@@ -58,7 +58,7 @@ export default function PrivacyPage() {
       </Card>
 
       <Card>
-        <CardHeader><CardTitle>Contact Us</CardTitle></Header>
+        <CardHeader><CardTitle>Contact Us</CardTitle></CardHeader>
         <CardContent className="space-y-4 text-card-foreground">
           <p>If you have questions or comments about this Privacy Policy, please contact us through our contact page.</p>
         </CardContent>
