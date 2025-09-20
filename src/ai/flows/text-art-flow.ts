@@ -53,7 +53,7 @@ const generateTextArtFlow = ai.defineFlow(
     const result = await ai.generate({ prompt: textArtPrompt, input: prompt });
     const rawOutput = result.text;
 
-    // If there's no output, return an empty array
+    // If there's no output, return an empty array to prevent crashes
     if (!rawOutput) {
       return {art: []};
     }
@@ -61,7 +61,7 @@ const generateTextArtFlow = ai.defineFlow(
     // Split the raw output by the separator to get individual art pieces
     const artPieces = rawOutput.split('<ART>').map(art => art.trim()).filter(art => art.length > 0);
     
-    // Return the generated art
+    // Return the generated art in the expected object format
     return { art: artPieces };
   }
 );
