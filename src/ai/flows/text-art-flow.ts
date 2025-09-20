@@ -7,7 +7,7 @@
 'use server';
 
 import {ai} from '@/ai/genkit';
-import {z} from 'genkit/zod';
+import {z} from 'genkit';
 
 // Define the schema for the flow's output
 const TextArtOutputSchema = z.object({
