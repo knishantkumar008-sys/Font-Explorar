@@ -14,6 +14,5 @@ export const ai = genkit({
       apiKey: 'AIzaSyCo_ixd4F4NBPqCUM_GJcCbhgCr_8Ct8vw',
     }),
   ],
-  logLevel: 'debug',
   enableTracingAndMetrics: true,
 });

@@ -7,7 +7,7 @@
 'use server';
 
 import {ai} from '@/ai/genkit';
-import {z} from 'genkit';
+import {z} from 'zod';
 
 // Define the schema for the flow's output
 const TextArtOutputSchema = z.object({
@@ -32,7 +32,7 @@ const textArtPrompt = ai.definePrompt({
   input: {schema: z.string()},
   output: {schema: TextArtOutputSchema},
   prompt: `You are an expert ASCII art generator.
-    Create 3 distinct and creative ASCII art designs based on the following prompt: {{{prompt}}}
+    Create 3 distinct and creative ASCII art designs based on the following prompt: {{prompt}}
     
     RULES:
     - Only output ASCII characters.
@@ -49,7 +49,9 @@ const generateTextArtFlow = ai.defineFlow(
   },
   async prompt => {
     // Run the prompt with the given input
-    const {output} = await textArtPrompt(prompt);
+    const result = await textArtPrompt(prompt);
+    const output = result.output();
+
     // If there's no output, return an empty array
     if (!output) {
       return {art: []};
