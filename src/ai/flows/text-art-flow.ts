@@ -50,7 +50,7 @@ const generateTextArtFlow = ai.defineFlow(
   },
   async prompt => {
     // Run the prompt with the given input
-    const result = await textArtPrompt(prompt);
+    const result = await ai.generate({ prompt: textArtPrompt, input: prompt });
     const rawOutput = result.text;
 
     // If there's no output, return an empty array
