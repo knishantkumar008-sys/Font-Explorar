@@ -19,7 +19,7 @@ export async function generateTextArt(
 ): Promise<{ art: string[] }> {
   try {
     const fullPrompt = `You are an expert ASCII art generator.
-      Create 3 distinct and creative ASCII art designs based on the following prompt: "{{prompt}}"
+      Create 3 distinct and creative ASCII art designs based on the following prompt: "${prompt}"
       
       RULES:
       - Separate each of the 3 art pieces with the exact separator: <ART>
@@ -29,7 +29,6 @@ export async function generateTextArt(
 
     const result = await ai.generate({
       prompt: fullPrompt,
-      input: { prompt: prompt },
     });
 
     const rawOutput = result.text;
