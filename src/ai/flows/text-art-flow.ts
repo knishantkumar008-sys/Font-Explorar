@@ -30,13 +30,13 @@ export async function generateTextArt(
 const textArtPrompt = ai.definePrompt({
   name: 'textArtPrompt',
   input: {schema: z.string()},
-  output: {schema: TextArtOutputSchema},
   prompt: `You are an expert ASCII art generator.
     Create 3 distinct and creative ASCII art designs based on the following prompt: {{prompt}}
     
     RULES:
+    - Separate each of the 3 art pieces with the exact separator: <ART>
     - Only output ASCII characters.
-    - Do not include any other text or explanation.
+    - Do not include any other text, explanation, or numbering.
     - Ensure the art is clearly recognizable.`,
 });
 
@@ -50,13 +50,17 @@ const generateTextArtFlow = ai.defineFlow(
   async prompt => {
     // Run the prompt with the given input
     const result = await textArtPrompt(prompt);
-    const output = result.output;
+    const rawOutput = result.text;
 
     // If there's no output, return an empty array
-    if (!output) {
+    if (!rawOutput) {
       return {art: []};
     }
+
+    // Split the raw output by the separator to get individual art pieces
+    const artPieces = rawOutput.split('<ART>').map(art => art.trim()).filter(art => art.length > 0);
+    
     // Return the generated art
-    return output;
+    return { art: artPieces };
   }
 );
