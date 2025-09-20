@@ -10,11 +10,6 @@
 import {ai} from '@/ai/genkit';
 import {z} from 'zod';
 
-// Define the schema for the flow's output
-const TextArtOutputSchema = z.object({
-  art: z.array(z.string()).describe('An array of 3 different ASCII art creations based on the prompt.'),
-});
-
 /**
  * The main exported function that clients will call.
  * It takes a prompt and returns a promise of the generated text art.
