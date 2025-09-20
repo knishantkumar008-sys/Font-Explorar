@@ -1,7 +1,7 @@
 
 "use client"
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useToast } from "@/hooks/use-toast";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { textArtCategories } from "@/lib/text-art";
@@ -66,7 +66,7 @@ export default function TextArtPage() {
     }
   };
 
-  useState(() => {
+  useEffect(() => {
     const savedLimit = localStorage.getItem('textArtLimit');
     if (savedLimit) {
       const { count, timestamp } = JSON.parse(savedLimit);
@@ -79,7 +79,7 @@ export default function TextArtPage() {
         setDailyLimit(count);
       }
     }
-  });
+  }, []);
 
 
   return (
@@ -145,4 +145,3 @@ export default function TextArtPage() {
     </div>
   );
 }
-
