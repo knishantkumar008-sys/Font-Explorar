@@ -107,7 +107,7 @@ export default function CreatorToolsPage() {
                 disabled={isCaptionPending}
               />
             <div className="space-y-2">
-                <Select value={captionTone} onValueChange={setCaptionTone} disabled={isCaptionPending}>
+                <Select value={captionTone} onValuechange={setCaptionTone} disabled={isCaptionPending}>
                     <SelectTrigger>
                         <SelectValue placeholder="Select a tone" />
                     </SelectTrigger>
