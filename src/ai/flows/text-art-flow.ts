@@ -33,13 +33,7 @@ const textArtFlow = ai.defineFlow(
   },
   async (input) => {
     const llmResponse = await ai.generate({
-      prompt: `You are an expert ASCII/Unicode artist. Create a piece of text art based on the following prompt.
-      - Use only text characters.
-      - Do not use any code blocks (like \`\`\`) or any other formatting.
-      - The art should be creative and visually appealing.
-      - Respond only with the text art itself.
-      
-      Prompt: ${input.prompt}`,
+      prompt: `You are an expert ASCII/Unicode artist. Create a piece of text art based on the following prompt: "${input.prompt}". Respond only with the text art and nothing else. Do not use code blocks.`,
       config: {
         temperature: 0.7,
       },
