@@ -66,6 +66,12 @@ export default function TextArtPage() {
     }
   };
 
+  const handleKeyDown = (event: React.KeyboardEvent<HTMLInputElement>) => {
+    if (event.key === 'Enter') {
+      handleGenerate();
+    }
+  };
+
    useEffect(() => {
     const savedLimit = localStorage.getItem('textArtLimit');
     if (savedLimit) {
@@ -104,6 +110,7 @@ export default function TextArtPage() {
                 placeholder="e.g., a cute cat"
                 value={prompt}
                 onChange={(e) => setPrompt(e.target.value)}
+                onKeyDown={handleKeyDown}
               />
               <Button onClick={handleGenerate} disabled={loading || dailyLimit >= 12}>
                 {loading && <Loader className="mr-2 h-4 w-4 animate-spin" />}
