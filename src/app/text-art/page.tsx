@@ -1,6 +1,6 @@
 "use client"
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useToast } from "@/hooks/use-toast";
 import { Card, CardContent } from "@/components/ui/card";
 import { textArtCategories } from "@/lib/text-art";
@@ -9,13 +9,49 @@ import { Button } from "@/components/ui/button";
 import { generateTextArt } from "@/ai/flows/text-art-flow";
 import { Sparkles, Copy, Loader2 } from "lucide-react";
 
+const DAILY_LIMIT = 12;
+const USAGE_KEY = 'textArtUsage';
+
+type Usage = {
+  count: number;
+  timestamp: number;
+};
+
 function AiTextArtGenerator() {
   const { toast } = useToast();
   const [prompt, setPrompt] = useState("");
   const [generatedArt, setGeneratedArt] = useState<string | null>(null);
   const [isLoading, setIsLoading] = useState(false);
+  const [remaining, setRemaining] = useState(DAILY_LIMIT);
+
+  useEffect(() => {
+    const usageData = localStorage.getItem(USAGE_KEY);
+    if (usageData) {
+      const usage: Usage = JSON.parse(usageData);
+      const now = Date.now();
+      const oneDay = 24 * 60 * 60 * 1000;
+
+      if (now - usage.timestamp > oneDay) {
+        localStorage.removeItem(USAGE_KEY);
+        setRemaining(DAILY_LIMIT);
+      } else {
+        setRemaining(Math.max(0, DAILY_LIMIT - usage.count));
+      }
+    } else {
+      setRemaining(DAILY_LIMIT);
+    }
+  }, []);
 
   const handleGenerate = async () => {
+    if (remaining <= 0) {
+      toast({
+        title: "Daily limit exceeded",
+        description: "You can generate up to 12 text arts per day. Please try again tomorrow.",
+        variant: "destructive",
+      });
+      return;
+    }
+
     if (!prompt) {
       toast({
         title: "Prompt is empty",
@@ -24,11 +60,31 @@ function AiTextArtGenerator() {
       });
       return;
     }
+
     setIsLoading(true);
     setGeneratedArt(null);
+
     try {
       const result = await generateTextArt({ prompt });
       setGeneratedArt(result.textArt);
+      
+      const usageData = localStorage.getItem(USAGE_KEY);
+      const now = Date.now();
+      let newCount = 1;
+
+      if (usageData) {
+        const usage: Usage = JSON.parse(usageData);
+        newCount = usage.count + 1;
+      }
+      
+      const newUsage: Usage = { count: newCount, timestamp: usageData ? JSON.parse(usageData).timestamp : now };
+      if (!usageData) {
+          newUsage.timestamp = now;
+      }
+
+      localStorage.setItem(USAGE_KEY, JSON.stringify(newUsage));
+      setRemaining(DAILY_LIMIT - newCount);
+
     } catch (error) {
       console.error("Error generating text art:", error);
       toast({
@@ -52,10 +108,15 @@ function AiTextArtGenerator() {
   return (
     <Card className="shadow-lg rounded-2xl mb-8">
       <CardContent className="p-6">
-        <h2 className="text-2xl font-bold mb-4 flex items-center gap-2">
-          <Sparkles className="h-6 w-6 text-primary" />
-          AI Text Art Generator
-        </h2>
+        <div className="flex justify-between items-center mb-4">
+          <h2 className="text-2xl font-bold flex items-center gap-2">
+            <Sparkles className="h-6 w-6 text-primary" />
+            AI Text Art Generator
+          </h2>
+          <div className="text-sm text-muted-foreground">
+            {remaining}/{DAILY_LIMIT} generations left
+          </div>
+        </div>
         <p className="text-muted-foreground mb-4">
           Describe what you want to create, and let our AI generate unique text art for you! For example, try "a rocket ship" or "a smiling dog".
         </p>
@@ -64,9 +125,9 @@ function AiTextArtGenerator() {
             value={prompt}
             onChange={(e) => setPrompt(e.target.value)}
             placeholder="e.g., a cat sitting on a moon"
-            disabled={isLoading}
+            disabled={isLoading || remaining <= 0}
           />
-          <Button onClick={handleGenerate} disabled={isLoading}>
+          <Button onClick={handleGenerate} disabled={isLoading || remaining <= 0}>
             {isLoading ? (
               <Loader2 className="h-4 w-4 animate-spin" />
             ) : (
