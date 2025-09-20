@@ -6,7 +6,7 @@ import { useToast } from "@/hooks/use-toast";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { textArtCategories } from "@/lib/text-art";
 import { Button } from "@/components/ui/button";
-import { Textarea } from "@/components/ui/textarea";
+import { Input } from "@/components/ui/input";
 import { generateTextArt } from "@/ai/flows/text-art-flow";
 import { Loader } from "lucide-react";
 
@@ -66,7 +66,7 @@ export default function TextArtPage() {
     }
   };
 
-  useEffect(() => {
+   useEffect(() => {
     const savedLimit = localStorage.getItem('textArtLimit');
     if (savedLimit) {
       const { count, timestamp } = JSON.parse(savedLimit);
@@ -94,22 +94,24 @@ export default function TextArtPage() {
             Describe the text art you want to create. For example, "a rose", "a cat sitting", or "a heart with wings". You can generate up to 12 images per day.
           </p>
           <div className="space-y-2">
-            <div className="flex justify-end">
-                <p className="text-xs text-muted-foreground mb-1">
-                {12 - dailyLimit}/12
-                </p>
-            </div>
-            <div className="flex items-start gap-2">
-              <Textarea
-                placeholder="e.g., a cute cat"
-                value={prompt}
-                onChange={(e) => setPrompt(e.target.value)}
-                rows={2}
-              />
-              <Button onClick={handleGenerate} disabled={loading || dailyLimit >= 12}>
-                {loading && <Loader className="mr-2 h-4 w-4 animate-spin" />}
-                Generate
-              </Button>
+             <div className="relative">
+                <div className="absolute top-1 right-2">
+                    <p className="text-xs text-muted-foreground mb-1">
+                    {12 - dailyLimit}/12
+                    </p>
+                </div>
+                <div className="flex items-center gap-2">
+                  <Input
+                    placeholder="e.g., a cute cat"
+                    value={prompt}
+                    onChange={(e) => setPrompt(e.target.value)}
+                    className="pr-12"
+                  />
+                  <Button onClick={handleGenerate} disabled={loading || dailyLimit >= 12}>
+                    {loading && <Loader className="mr-2 h-4 w-4 animate-spin" />}
+                    Generate
+                  </Button>
+                </div>
             </div>
           </div>
           {error && <p className="text-sm font-medium text-destructive">{error}</p>}
