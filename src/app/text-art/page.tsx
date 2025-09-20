@@ -18,6 +18,13 @@ export default function TextArtPage() {
 
   return (
     <div className="p-4 md:p-6 space-y-8">
+      <div className="space-y-4 text-center">
+        <h1 className="text-4xl font-bold tracking-tight">Text Art & ASCII Art</h1>
+        <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
+          Copy and paste stunning text art for your social media posts, comments, and bios. Explore our collection of ASCII art to make your content stand out.
+        </p>
+      </div>
+
       <div className="space-y-6">
         {textArtCategories.map((category) => (
           <div key={category.name}>
