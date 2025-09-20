@@ -46,6 +46,9 @@ export default function RootLayout({
                   <Link href="/symbols">Symbols</Link>
                 </Button>
                 <Button variant="ghost" asChild className="text-white hover:bg-white/10 hover:text-white">
+                  <Link href="/text-art">Text Art</Link>
+                </Button>
+                <Button variant="ghost" asChild className="text-white hover:bg-white/10 hover:text-white">
                   <Link href="/blog">Blog</Link>
                 </Button>
                 <ThemeToggle />
