@@ -10,9 +10,7 @@ import {googleAI} from '@genkit-ai/googleai';
 
 export const ai = genkit({
   plugins: [
-    googleAI({
-      apiKey: 'AIzaSyCo_ixd4F4NBPqCUM_GJcCbhgCr_8Ct8vw',
-    }),
+    googleAI(),
   ],
   enableTracingAndMetrics: true,
 });
