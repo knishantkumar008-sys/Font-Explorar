@@ -40,7 +40,7 @@ export default function RootLayout({
               <Button variant="ghost" asChild className="text-white hover:bg-white/10 hover:text-white">
                 <Link href="/text-art">Text Art</Link>
               </Button>
-              <Button variant="ghost" asChild className="text-white hover.bg-white/10 hover:text-white">
+              <Button variant="ghost" asChild className="text-white hover:bg-white/10 hover:text-white">
                 <Link href="/blog">Blog</Link>
               </Button>
             </nav>
@@ -59,6 +59,7 @@ export default function RootLayout({
                 <Link href="/about" className="hover:underline">About</Link>
                 <Link href="/contact" className="hover:underline">Contact</Link>
                 <Link href="/privacy" className="hover:underline">Privacy Policy</Link>
+                <Link href="/terms" className="hover:underline">Terms & Conditions</Link>
               </div>
             </div>
           </footer>
