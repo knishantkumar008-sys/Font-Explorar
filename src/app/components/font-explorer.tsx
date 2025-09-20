@@ -160,7 +160,7 @@ export default function FontExplorer() {
           {paginatedResults.length > 0 ? paginatedResults.map((result) => {
             const isLiked = likedFonts.includes(result.style);
             return (
-              <div key={result.style} className="rounded-lg border bg-white/80 backdrop-blur-sm text-card-foreground shadow-lg">
+              <div key={result.style} className="rounded-lg border bg-card text-card-foreground shadow-lg">
                 <div className="flex items-center justify-between p-4">
                   <p className="text-xl font-mono flex-grow pr-4">{result.text}</p>
                   <div className="flex items-center space-x-1">
@@ -225,7 +225,7 @@ export default function FontExplorer() {
           </Button>
         </div>
       )}
-      <div className="mt-8 space-y-8 text-center text-card-foreground bg-white/80 backdrop-blur-sm p-6 md:p-8 rounded-2xl shadow-lg">
+      <div className="mt-8 space-y-8 text-center text-card-foreground bg-card p-6 md:p-8 rounded-2xl shadow-lg">
         <div className="max-w-3xl mx-auto">
             <h2 className="text-3xl font-bold mb-4">About Our Fonts</h2>
             <p className="text-muted-foreground">
