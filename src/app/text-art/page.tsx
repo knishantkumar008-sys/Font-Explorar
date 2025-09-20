@@ -94,6 +94,11 @@ export default function TextArtPage() {
             Describe the text art you want to create. For example, "a rose", "a cat sitting", or "a heart with wings". You can generate up to 12 images per day.
           </p>
           <div className="space-y-2">
+            <div className="flex justify-end">
+                <p className="text-xs text-muted-foreground mb-1">
+                {12 - dailyLimit}/12
+                </p>
+            </div>
             <div className="flex items-start gap-2">
               <Textarea
                 placeholder="e.g., a cute cat"
@@ -105,9 +110,6 @@ export default function TextArtPage() {
                 Generate
               </Button>
             </div>
-            <p className="text-sm text-muted-foreground">
-              Generations left today: {12 - dailyLimit}
-            </p>
           </div>
           {error && <p className="text-sm font-medium text-destructive">{error}</p>}
           {loading && (
