@@ -4,40 +4,17 @@
 import { useToast } from "@/hooks/use-toast";
 import { Card, CardContent } from "@/components/ui/card";
 import { textArtCategories } from "@/lib/text-art";
-import { useState, useEffect, useTransition } from 'react';
+import { useState, useTransition } from 'react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { generateTextArt } from '@/ai/flows/text-art-flow';
 import { Loader } from 'lucide-react';
-
-const DAILY_LIMIT = 12;
 
 export default function TextArtPage() {
   const { toast } = useToast();
   const [isPending, startTransition] = useTransition();
   const [prompt, setPrompt] = useState('');
   const [generatedArt, setGeneratedArt] = useState<string[]>([]);
-  const [limit, setLimit] = useState({ count: DAILY_LIMIT, timestamp: new Date().getTime() });
-
-  useEffect(() => {
-    const savedLimit = localStorage.getItem('textArtLimit');
-    if (savedLimit) {
-      const { count, timestamp } = JSON.parse(savedLimit);
-      const now = new Date().getTime();
-      const hoursPassed = (now - timestamp) / (1000 * 60 * 60);
-
-      if (hoursPassed > 24) {
-        setLimit({ count: DAILY_LIMIT, timestamp: now });
-        localStorage.setItem('textArtLimit', JSON.stringify({ count: DAILY_LIMIT, timestamp: now }));
-      } else {
-        setLimit({ count, timestamp });
-      }
-    } else {
-       const now = new Date().getTime();
-       setLimit({ count: DAILY_LIMIT, timestamp: now });
-       localStorage.setItem('textArtLimit', JSON.stringify({ count: DAILY_LIMIT, timestamp: now }));
-    }
-  }, []);
 
   const copyToClipboard = (art: string) => {
     navigator.clipboard.writeText(art);
@@ -48,25 +25,10 @@ export default function TextArtPage() {
   };
 
   const handleGenerate = () => {
-    if (limit.count <= 0) {
-      toast({
-        title: "Daily limit reached",
-        description: "You have reached your daily limit for generating text art.",
-        variant: "destructive",
-      });
-      return;
-    }
-
     startTransition(async () => {
       try {
         const result = await generateTextArt(prompt);
         setGeneratedArt(result.art);
-
-        const newCount = limit.count - 1;
-        const newLimit = { ...limit, count: newCount };
-        setLimit(newLimit);
-        localStorage.setItem('textArtLimit', JSON.stringify(newLimit));
-
       } catch (error) {
         toast({
           title: 'Error generating art',
@@ -96,7 +58,6 @@ export default function TextArtPage() {
         <CardContent className="p-6 space-y-4">
           <div className="flex justify-between items-center">
              <h2 className="text-2xl font-bold">AI Text Art Generator</h2>
-             <p className="text-sm text-muted-foreground">{limit.count}/{DAILY_LIMIT} generations left</p>
           </div>
           <div className="flex gap-2 items-center">
             <Input
