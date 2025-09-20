@@ -1,3 +1,4 @@
+
 "use client"
 
 import { useState } from "react";
@@ -93,15 +94,17 @@ export default function TextArtPage() {
             Describe the text art you want to create. For example, "a rose", "a cat sitting", or "a heart with wings". You can generate up to 12 images per day.
           </p>
           <div className="space-y-2">
-            <Textarea
-              placeholder="e.g., a cute cat"
-              value={prompt}
-              onChange={(e) => setPrompt(e.target.value)}
-            />
-            <Button onClick={handleGenerate} disabled={loading || dailyLimit >= 12}>
-              {loading && <Loader className="mr-2 h-4 w-4 animate-spin" />}
-              Generate
-            </Button>
+            <div className="flex items-start gap-2">
+              <Textarea
+                placeholder="e.g., a cute cat"
+                value={prompt}
+                onChange={(e) => setPrompt(e.target.value)}
+              />
+              <Button onClick={handleGenerate} disabled={loading || dailyLimit >= 12}>
+                {loading && <Loader className="mr-2 h-4 w-4 animate-spin" />}
+                Generate
+              </Button>
+            </div>
             <p className="text-sm text-muted-foreground">
               Generations left today: {12 - dailyLimit}
             </p>
@@ -142,3 +145,4 @@ export default function TextArtPage() {
     </div>
   );
 }
+
