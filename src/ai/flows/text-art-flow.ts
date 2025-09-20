@@ -19,11 +19,11 @@ const TextArtOutputSchema = z.object({
  * The main exported function that clients will call.
  * It takes a prompt and returns a promise of the generated text art.
  * @param {string} prompt - The text prompt to generate art from.
- * @returns {Promise<z.infer<typeof TextArtOutputSchema>>} A promise that resolves to the generated art.
+ * @returns {Promise<{ art: string[] }>} A promise that resolves to the generated art.
  */
 export async function generateTextArt(
   prompt: string
-): Promise<z.infer<typeof TextArtOutputSchema>> {
+): Promise<{ art: string[] }> {
   return generateTextArtFlow(prompt);
 }
 
@@ -46,7 +46,6 @@ const generateTextArtFlow = ai.defineFlow(
   {
     name: 'generateTextArtFlow',
     inputSchema: z.string(),
-    outputSchema: TextArtOutputSchema,
   },
   async prompt => {
     // Run the prompt with the given input
