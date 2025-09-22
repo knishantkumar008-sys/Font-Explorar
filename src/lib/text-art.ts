@@ -127,7 +127,26 @@ export const textArtCategories = [
   {
     name: "Memes",
     arts: [
-      `⠀⠀⠀⠀⠀⠀⠀⢀⡔⠋⢉⠩⡉⠛⠛⠛ EARLY, THE TEXT ART IS A BLACK AND WHITE IMAGE OF A TROLL FACE. THE FACE IS MADE UP OF SMALL DOTS. THE DOTS ARE ARRANGED TO FORM THE OUTLINE OF THE FACE, THE EYES, THE NOSE, AND THE MOUTH. THE TROLL FACE IS SMILING. THE IMAGE IS ON A WHITE BACKGROUND. THE TEXT ART IS IN THE CENTER OF THE IMAGE. THERE ARE TWO BUTTONS ON THE LEFT SIDE OF THE IMAGE. THE TOP BUTTON HAS A THUMBS UP ICON AND THE BOTTOM BUTTON HAS A THUMBS DOWN ICON. THERE ARE THREE BUTTONS ON THE RIGHT SIDE OF THE IMAGE. THE TOP BUTTON SAYS "COPY", THE MIDDLE BUTTON SAYS "INVERT", AND THE BOTTOM BUTTON SAYS "EDIT". THERE ARE SIX BUTTONS BELOW THE IMAGE. THE BUTTONS SAY "TROLL", "FACE", "TROLL FACE", "DOT ART", "TEXT ART", AND "ASCII ART". THERE ARE TWO BUTTONS BELOW THE SIX BUTTONS. THE LEFT BUTTON SAYS "DRAW DOT ART" AND THE RIGHT BUTTON SAYS "IMAGE -> DOT ART".`,
+      "(•_•)",
+      "( •_•)>⌐■-■",
+      "(⌐■_■)",
+      "¯\\_(ツ)_/¯",
+      "(╯°□°）╯︵ ┻━┻",
+      "┬─┬ノ( º _ ºノ)",
+      "ಠ_ಠ",
+      "༼ つ ◕_◕ ༽つ",
+      " (ง'̀-'́)ง",
+      "/(.□.)\\",
+      "~(˘▾˘~)",
+      "| (• ◡•)| (❍ᴥ❍ʋ)",
+      "[\"___(‘-’*)\"]",
+      "(-(-_(-_-)_-)-)",
+      "ε=ε=ε=ε=┌(;￣▽￣)┘",
+      "__:(´ཀ`」 ∠):__",
+      "°Д°",
+      "ヾ(`ヘ´)ﾉﾞ",
+      "ლ(ಠ益ಠლ)",
+      "\\ (•◡•) /"
     ]
   },
 ];
