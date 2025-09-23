@@ -1,3 +1,4 @@
+
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import { Toaster } from "@/components/ui/toaster"
@@ -40,21 +41,23 @@ export default function RootLayout({
                     Font Explorer
                   </span>
               </Link>
-              <nav className="ml-auto flex items-center space-x-1">
-                <Button variant="ghost" asChild className="text-white hover:bg-white/10 hover:text-white">
-                  <Link href="/">Home</Link>
-                </Button>
-                <Button variant="ghost" asChild className="text-white hover:bg-white/10 hover:text-white">
-                  <Link href="/symbols">Symbols</Link>
-                </Button>
-                <Button variant="ghost" asChild className="text-white hover:bg-white/10 hover:text-white">
-                  <Link href="/text-art">Text Art</Link>
-                </Button>
-                <Button variant="ghost" asChild className="text-white hover:bg-white/10 hover:text-white">
-                  <Link href="/blog">Blog</Link>
-                </Button>
+              <div className="ml-auto flex items-center space-x-4">
+                <nav className="hidden md:flex items-center space-x-1">
+                  <Button variant="ghost" asChild className="text-white hover:bg-white/10 hover:text-white">
+                    <Link href="/">Home</Link>
+                  </Button>
+                  <Button variant="ghost" asChild className="text-white hover:bg-white/10 hover:text-white">
+                    <Link href="/symbols">Symbols</Link>
+                  </Button>
+                  <Button variant="ghost" asChild className="text-white hover:bg-white/10 hover:text-white">
+                    <Link href="/text-art">Text Art</Link>
+                  </Button>
+                  <Button variant="ghost" asChild className="text-white hover:bg-white/10 hover:text-white">
+                    <Link href="/blog">Blog</Link>
+                  </Button>
+                </nav>
                 <ThemeToggle />
-              </nav>
+              </div>
             </header>
             <main className="flex-1 overflow-auto p-4 md:p-6">
               <div className="mx-auto max-w-4xl">
