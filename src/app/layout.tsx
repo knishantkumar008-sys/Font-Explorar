@@ -34,13 +34,13 @@ export default function RootLayout({
         >
           <div className="flex flex-col min-h-screen">
             <header className="flex h-20 items-center px-4 md:px-6">
-              <Link href="/" className="flex items-center gap-2 mr-auto text-white hover:text-white/90 transition-colors">
+              <Link href="/" className="flex items-center gap-2 text-white hover:text-white/90 transition-colors">
                   <Type className="h-7 w-7" />
                   <span className="hidden sm:inline text-xl font-semibold tracking-tight">
                     Font Explorer
                   </span>
               </Link>
-              <nav className="flex items-center space-x-1">
+              <nav className="flex items-center space-x-1 ml-6">
                 <Button variant="ghost" asChild className="text-white hover:bg-white/10 hover:text-white">
                   <Link href="/">Home</Link>
                 </Button>
@@ -53,8 +53,10 @@ export default function RootLayout({
                 <Button variant="ghost" asChild className="text-white hover:bg-white/10 hover:text-white">
                   <Link href="/blog">Blog</Link>
                 </Button>
-                <ThemeToggle />
               </nav>
+              <div className="ml-auto">
+                <ThemeToggle />
+              </div>
             </header>
             <main className="flex-1 overflow-auto p-4 md:p-6">
               <div className="mx-auto max-w-4xl">
