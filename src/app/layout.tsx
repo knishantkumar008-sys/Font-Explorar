@@ -57,7 +57,7 @@ export default function RootLayout({
                         </Button>
                     </nav>
 
-                    <div className="flex items-center ml-4">
+                    <div className="flex items-center ml-auto md:ml-4">
                         <ThemeToggle />
                         <Sheet>
                             <SheetTrigger asChild>
@@ -68,7 +68,7 @@ export default function RootLayout({
                             </SheetTrigger>
                             <SheetContent side="left">
                                 <div className="flex flex-col gap-4 py-8">
-                                    <Link href="/" className="flex items-center gap-2 mb-4">
+                                    <Link href="/" className="flex items-center gap-2 mb-4 text-foreground">
                                         <Logo />
                                         <span className="font-bold text-lg">Font Explorer</span>
                                     </Link>
@@ -83,7 +83,7 @@ export default function RootLayout({
                 </div>
             </header>
             <main className="flex-1 overflow-auto p-4 md:p-6">
-              <div className="mx-auto max-w-4xl">
+              <div className="container mx-auto max-w-4xl">
                 {children}
               </div>
             </main>
