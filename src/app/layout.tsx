@@ -40,7 +40,7 @@ export default function RootLayout({
                     Font Explorer
                   </span>
               </Link>
-              <nav className="flex items-center space-x-1 ml-6">
+              <nav className="flex items-center space-x-1 ml-2 md:ml-6">
                 <Button variant="ghost" asChild className="text-white hover:bg-white/10 hover:text-white">
                   <Link href="/">Home</Link>
                 </Button>
