@@ -40,7 +40,7 @@ export default function RootLayout({
                     Font Explorer
                   </span>
               </Link>
-              <nav className="flex items-center space-x-1 ml-2 md:ml-6">
+              <nav className="ml-auto flex items-center space-x-1">
                 <Button variant="ghost" asChild className="text-white hover:bg-white/10 hover:text-white">
                   <Link href="/">Home</Link>
                 </Button>
@@ -53,10 +53,8 @@ export default function RootLayout({
                 <Button variant="ghost" asChild className="text-white hover:bg-white/10 hover:text-white">
                   <Link href="/blog">Blog</Link>
                 </Button>
-              </nav>
-              <div className="ml-auto">
                 <ThemeToggle />
-              </div>
+              </nav>
             </header>
             <main className="flex-1 overflow-auto p-4 md:p-6">
               <div className="mx-auto max-w-4xl">
