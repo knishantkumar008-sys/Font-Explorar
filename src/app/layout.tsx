@@ -7,7 +7,7 @@ import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { ThemeProvider } from '@/app/components/theme-provider';
 import { ThemeToggle } from '@/app/components/theme-toggle';
-import { Type } from 'lucide-react';
+import { Logo } from '@/app/components/logo';
 
 const inter = Inter({
   subsets: ['latin'],
@@ -37,12 +37,12 @@ export default function RootLayout({
             <header className="h-20">
                 <div className="container mx-auto flex h-full items-center px-4 md:px-6">
                     <Link href="/" className="flex items-center gap-2 text-white hover:text-white/90 transition-colors">
-                        <Type className="h-7 w-7" />
+                        <Logo />
                         <span className="hidden sm:inline text-xl font-semibold tracking-tight">
                             Font Explorer
                         </span>
                     </Link>
-                    <div className="ml-auto flex items-center space-x-4">
+                    <div className="ml-auto flex items-center space-x-1">
                         <nav className="hidden md:flex items-center space-x-1">
                             <Button variant="ghost" asChild className="text-white hover:bg-white/10 hover:text-white">
                                 <Link href="/">Home</Link>
