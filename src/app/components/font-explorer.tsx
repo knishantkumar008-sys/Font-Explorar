@@ -17,7 +17,7 @@ type LikedFont = {
 };
 
 export default function FontExplorer() {
-  const [inputText, setInputText] = useState('Font Explorer');
+  const [inputText, setInputText] = useState('Font Style');
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [currentPage, setCurrentPage] = useState(1);
   const [likedFonts, setLikedFonts] = useState<string[]>([]);
