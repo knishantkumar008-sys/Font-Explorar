@@ -17,7 +17,7 @@ type LikedFont = {
 };
 
 export default function FontExplorer() {
-  const [inputText, setInputText] = useState('Font Style');
+  const [inputText, setInputText] = useState('Font Explorer');
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [currentPage, setCurrentPage] = useState(1);
   const [likedFonts, setLikedFonts] = useState<string[]>([]);
@@ -128,7 +128,7 @@ export default function FontExplorer() {
     <>
       <Card className="shadow-2xl rounded-2xl">
         <CardContent className="p-6">
-          <h2 className="text-2xl font-bold text-center mb-4">Font Style</h2>
+          <h2 className="text-2xl font-bold text-center mb-4">Font Explorer</h2>
           <div className="relative p-1 bg-gradient-to-r from-pink-500 via-yellow-500 to-cyan-500 rounded-lg">
              <textarea
                 value={inputText}
