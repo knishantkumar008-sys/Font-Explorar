@@ -30,6 +30,8 @@ const nextConfig: NextConfig = {
       },
     ],
   },
+  // Ensure no server-side environment variables are exposed to the client.
+  env: {},
 };
 
 export default nextConfig;
