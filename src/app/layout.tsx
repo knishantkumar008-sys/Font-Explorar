@@ -38,9 +38,6 @@ export default function RootLayout({
                 <div className="container mx-auto flex h-full items-center px-4 md:px-6">
                     <Link href="/" className="flex items-center gap-2 text-white hover:text-white/90 transition-colors">
                         <Logo />
-                        <span className="hidden sm:inline text-xl font-semibold tracking-tight">
-                            Font Explorer
-                        </span>
                     </Link>
                     <div className="ml-auto flex items-center space-x-1">
                         <nav className="hidden md:flex items-center space-x-1">
